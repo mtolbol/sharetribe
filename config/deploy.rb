@@ -12,7 +12,8 @@ set :repo_url, "git@github.com:substancelab/sharetribe.git"
 set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 
 # Cache bundled gems across deployments
-append :linked_dirs, '.bundle'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
+# append :linked_files, 'config/database.yml', 'config/secrets.yml'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
