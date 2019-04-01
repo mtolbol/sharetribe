@@ -9,6 +9,7 @@ set :repo_url, "git@github.com:substancelab/sharetribe.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
