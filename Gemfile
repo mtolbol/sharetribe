@@ -125,6 +125,10 @@ group :development do
   gem 'web-console', '~> 3.5.1'
   gem 'awesome_print', '~> 1.7.0'
   gem 'binding_of_caller'
+
+  # Deployment via Capistrano
+  gem "capistrano"
+  gem "capistrano-bundler", "~> 1.5"
 end
 
 group :test do
