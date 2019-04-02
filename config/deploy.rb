@@ -13,7 +13,18 @@ set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 
 # Cache bundled gems across deployments
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
-# append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/database.yml', 'config/config.yml'
+
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v7.8.0'
+set :nvm_map_bins, %w{node npm yarn}
+
+set :default_env, {
+  "PATH" => [
+    "$PATH",
+    "/home/tumlino_production/.nvm/versions/node/v7.8.0/bin"
+  ].join(":")
+}
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh

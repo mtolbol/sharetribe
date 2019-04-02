@@ -129,6 +129,8 @@ group :development do
   # Deployment via Capistrano
   gem "capistrano"
   gem "capistrano-bundler", "~> 1.5"
+  gem "capistrano-npm"
+  gem "capistrano-nvm", :require => false
   gem "capistrano-rails"
 end
 
