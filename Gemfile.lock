@@ -127,6 +127,10 @@ GEM
     capistrano-rbenv (2.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
+    capistrano3-puma (3.1.1)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (~> 3.4)
     capybara (2.18.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -386,9 +390,6 @@ GEM
     parallel (1.11.2)
     parser (2.4.0.0)
       ast (~> 2.2)
-    passenger (6.0.1)
-      rack
-      rake (>= 0.8.1)
     paypal-sdk-core (0.3.4)
       multi_json (~> 1.0)
       xml-simple
@@ -410,6 +411,7 @@ GEM
       byebug (~> 9.0)
       pry (~> 0.10)
     public_suffix (2.0.5)
+    puma (3.12.1)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -636,6 +638,7 @@ DEPENDENCIES
   capistrano-nvm
   capistrano-rails
   capistrano-rbenv
+  capistrano3-puma
   capybara (~> 2.18.0)
   coffee-rails (~> 4.2.2)
   color (~> 1.8)
@@ -683,13 +686,13 @@ DEPENDENCIES
   omniauth-google-oauth2 (>= 0.6.0)
   omniauth-linkedin-oauth2 (>= 1.0.0)
   paperclip (~> 5.2.1)
-  passenger (~> 6.0.1)
   paypal-sdk-merchant (~> 1.116.0)
   paypal-sdk-permissions (~> 1.96.4)
   possibly (~> 1.0.1)
   premailer (~> 1.10.4)
   pry-byebug
   public_suffix (~> 2.0.5)
+  puma
   rack-attack (~> 5.0.1)
   rails (= 5.1.6.2)
   rails-controller-testing (~> 1.0.2)

@@ -14,8 +14,7 @@ gem 'jquery-rails', '~> 4.3.1'
 
 # Bundle the extra gems:
 
-# gem 'heroku' install the Heroku toolbelt (https://toolbelt.heroku.com/) instead (as gem had some problems)
-gem "passenger", '~> 6.0.1'
+gem "puma"
 
 gem "mysql2", '0.4.10'
 gem "bcrypt", '3.1.12'
@@ -131,6 +130,7 @@ group :development do
   gem "capistrano-bundler", "~> 1.5"
   gem "capistrano-npm"
   gem "capistrano-nvm", :require => false
+  gem "capistrano3-puma", :require => false
   gem "capistrano-rails"
   gem "capistrano-rbenv", :require => false
 end
