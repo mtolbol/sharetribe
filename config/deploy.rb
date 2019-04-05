@@ -19,6 +19,9 @@ set :nvm_type, :user # or :system, depends on your nvm setup
 set :nvm_node, 'v7.8.0'
 set :nvm_map_bins, %w{node npm yarn}
 
+set :rbenv_type, :user
+set :rbenv_ruby, '2.3.4'
+
 set :default_env, {
   "PATH" => [
     "$PATH",

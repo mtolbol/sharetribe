@@ -132,6 +132,7 @@ group :development do
   gem "capistrano-npm"
   gem "capistrano-nvm", :require => false
   gem "capistrano-rails"
+  gem "capistrano-rbenv", :require => false
 end
 
 group :test do
