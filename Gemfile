@@ -136,6 +136,7 @@ group :development do
   gem "capistrano3-puma", :require => false
   gem "capistrano-rails"
   gem "capistrano-rbenv", :require => false
+  gem "capistrano-systemd-multiservice", :require => false
 end
 
 group :test do

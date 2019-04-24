@@ -43,5 +43,11 @@ require "whenever/capistrano"
 install_plugin Capistrano::Puma
 install_plugin Capistrano::Puma::Workers  # Cluster/workers control
 
+require "capistrano/systemd/multiservice"
+install_plugin Capistrano::Systemd::MultiService.new_service(
+  "delayed_job",
+  :service_type => "user"
+)
+
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }

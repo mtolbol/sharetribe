@@ -1,7 +1,8 @@
 # Deploy all the things to a single Digital Ocean droplet
-server "207.154.218.133", user: "tumlino_production", roles: %w{app db web}
+server "207.154.218.133", user: "tumlino_production", roles: %w{app db web worker}
 
 set :deploy_to, "/home/tumlino_production/apps/sharetribe"
+set :user, "tumlino_production"
 
 # Configuration
 # =============

@@ -58,3 +58,14 @@ set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+namespace :deploy do
+  task :make_systemd_directories do
+    on roles(:worker) do
+      systemd_config_directory = "/home/tumlino_production/.config/systemd/user/"
+      execute(:mkdir, "-p", systemd_config_directory)
+    end
+  end
+
+  before "systemd:delayed_job:setup", "deploy:make_systemd_directories"
+end

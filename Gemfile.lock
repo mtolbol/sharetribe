@@ -127,6 +127,8 @@ GEM
     capistrano-rbenv (2.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
+    capistrano-systemd-multiservice (0.1.0.beta7)
+      capistrano (>= 3.7.0, < 3.12.0)
     capistrano3-puma (3.1.1)
       capistrano (~> 3.7)
       capistrano-bundler
@@ -642,6 +644,7 @@ DEPENDENCIES
   capistrano-nvm
   capistrano-rails
   capistrano-rbenv
+  capistrano-systemd-multiservice
   capistrano3-puma
   capybara (~> 2.18.0)
   coffee-rails (~> 4.2.2)
