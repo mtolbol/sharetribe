@@ -66,6 +66,7 @@
 require 'spec_helper'
 
 describe Person, type: :model do
+  it { should have_many(:working_time_slots).through(:listings) }
 
    before(:all) do
       #These will be created only once for the whole example group

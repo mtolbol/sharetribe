@@ -94,6 +94,7 @@ class Person < ApplicationRecord
   attr_accessor :login
 
   has_many :listings, -> { exist }, :dependent => :destroy, :foreign_key => "author_id"
+  has_many :working_time_slots, :through => :listings, :class_name => "Listing::WorkingTimeSlot"
   has_many :emails, :dependent => :destroy, :inverse_of => :person
 
   has_one :location, -> { where(location_type: :person) }, :dependent => :destroy
