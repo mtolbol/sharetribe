@@ -128,6 +128,7 @@ group :development do
 end
 
 group :test do
+  gem "shoulda-matchers"
   gem 'capybara', '~> 2.18.0'
   gem "rspec-rails", '~> 3.6.0'
 
