@@ -29,6 +29,8 @@ set :default_env, {
   ].join(":")
 }
 
+set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
