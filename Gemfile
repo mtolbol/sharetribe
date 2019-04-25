@@ -42,6 +42,7 @@ gem 'ts-delayed-delta',
   :ref    => '0aef2195f3acc1da048f18bc0191c90538565705'
 gem 'possibly', '~> 1.0.1'
 
+gem 'daemons'
 gem 'delayed_job', '~> 4.1.3'
 gem 'delayed_job_active_record', '~> 4.1.2'
 
