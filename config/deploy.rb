@@ -68,4 +68,5 @@ namespace :deploy do
   end
 
   before "systemd:delayed_job:setup", "deploy:make_systemd_directories"
+  after "deploy:publishing", "systemd:delayed_job:restart"
 end
