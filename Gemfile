@@ -14,8 +14,7 @@ gem 'jquery-rails', '~> 4.3.1'
 
 # Bundle the extra gems:
 
-# gem 'heroku' install the Heroku toolbelt (https://toolbelt.heroku.com/) instead (as gem had some problems)
-gem "passenger", '~> 6.0.1'
+gem "puma"
 
 gem "mysql2", '0.4.10'
 gem "bcrypt", '3.1.12'
@@ -43,6 +42,7 @@ gem 'ts-delayed-delta',
   :ref    => '0aef2195f3acc1da048f18bc0191c90538565705'
 gem 'possibly', '~> 1.0.1'
 
+gem 'daemons'
 gem 'delayed_job', '~> 4.1.3'
 gem 'delayed_job_active_record', '~> 4.1.2'
 
@@ -101,6 +101,8 @@ gem 'mail', '~> 2.6.6.rc1'
 
 gem 'tzinfo-data', '~> 1.2017', '>= 1.2017.2'
 
+gem "whenever", :require => false
+
 group :staging, :production do
   gem 'newrelic_rpm', '~> 4.2.0.334'
   gem 'rails_12factor', '~> 0.0.3'
@@ -125,6 +127,16 @@ group :development do
   gem 'web-console', '~> 3.5.1'
   gem 'awesome_print', '~> 1.7.0'
   gem 'binding_of_caller'
+
+  # Deployment via Capistrano
+  gem "capistrano"
+  gem "capistrano-bundler", "~> 1.5"
+  gem "capistrano-npm"
+  gem "capistrano-nvm", :require => false
+  gem "capistrano3-puma", :require => false
+  gem "capistrano-rails"
+  gem "capistrano-rbenv", :require => false
+  gem "capistrano-systemd-multiservice", :require => false
 end
 
 group :test do
