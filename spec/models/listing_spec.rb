@@ -68,6 +68,7 @@
 require 'spec_helper'
 
 describe Listing, type: :model do
+  it { should have_many(:working_time_slots) }
 
   before(:each) do
     @listing = FactoryGirl.build(:listing, listing_shape_id: 123)
