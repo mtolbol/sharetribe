@@ -48,91 +48,156 @@ RSpec.describe ListingPresenter, type: :presenter do
     let(:booking4) { FactoryGirl.create(:booking, tx: transaction4, start_time: '2017-11-14 09:00', end_time: '2017-11-14 10:00', per_hour: true) }
 
 
-    it '#working_hours_blocked_days 2017-11-14 is busy full day.
-        2017-11-13, 2017-11-15 no working hours' do
-      Timecop.freeze(Time.local(2017, 11, 13)) do
-        time_slot1
-        time_slot2
-        booking1
-        booking2
-        booking3
-        blocked_days = ListingPresenter.new(listing, community, {}, person)
-          .availability_per_hour_blocked_dates
-        expect(blocked_days.include?(Date.parse('2017-11-13'))).to eq true
-        expect(blocked_days.include?(Date.parse('2017-11-14'))).to eq true
-        expect(blocked_days.include?(Date.parse('2017-11-15'))).to eq true
+    describe "#working_hours_blocked_days" do
+      it "2017-11-14 is busy full day.
+        2017-11-13, 2017-11-15 no working hours" do
+        Timecop.freeze(Time.local(2017, 11, 13)) do
+          time_slot1
+          time_slot2
+          booking1
+          booking2
+          booking3
+          blocked_days = ListingPresenter.new(listing, community, {}, person)
+            .availability_per_hour_blocked_dates
+          expect(blocked_days.include?(Date.parse("2017-11-13"))).to eq true
+          expect(blocked_days.include?(Date.parse("2017-11-14"))).to eq true
+          expect(blocked_days.include?(Date.parse("2017-11-15"))).to eq true
+        end
+      end
+
+      it "2017-11-14 is busy part day.
+        2017-11-13, 2017-11-15 no working hours" do
+        Timecop.freeze(Time.local(2017, 11, 13)) do
+          time_slot1
+          time_slot2
+          booking1
+          booking2
+          blocked_days = ListingPresenter.new(listing, community, {}, person)
+            .availability_per_hour_blocked_dates
+          expect(blocked_days.include?(Date.parse("2017-11-13"))).to eq true
+          expect(blocked_days.include?(Date.parse("2017-11-14"))).to eq false
+          expect(blocked_days.include?(Date.parse("2017-11-15"))).to eq true
+        end
       end
     end
 
-    it '#working_hours_blocked_days 2017-11-14 is busy part day.
-        2017-11-13, 2017-11-15 no working hours' do
-      Timecop.freeze(Time.local(2017, 11, 13)) do
-        time_slot1
-        time_slot2
-        booking1
-        booking2
-        blocked_days = ListingPresenter.new(listing, community, {}, person)
-          .availability_per_hour_blocked_dates
-        expect(blocked_days.include?(Date.parse('2017-11-13'))).to eq true
-        expect(blocked_days.include?(Date.parse('2017-11-14'))).to eq false
-        expect(blocked_days.include?(Date.parse('2017-11-15'))).to eq true
-      end
-    end
+    describe "#availability_per_hour_options_for_select_grouped_by_day" do
+      let(:date) { "2017-11-14" }
 
-    it '#availability_per_hour_options_for_select_grouped_by_day' do
-      Timecop.freeze(Time.local(2017, 11, 13)) do
-        time_slot1
-        time_slot2
-        options = ListingPresenter.new(listing, community, {}, person)
-          .availability_per_hour_options_for_select_grouped_by_day
-        expect(options["2017-11-14"]).to eq(
-          [
-            {:value=>"09:00", :name=>" 9:00 am", :slot=>0},
-            {:value=>"10:00", :name=>"10:00 am", :slot=>0},
-            {:value=>"11:00", :name=>"11:00 am", :slot=>0, :disabled=>true, :slot_end=>true},
-            {:value=>"14:00", :name=>" 2:00 pm", :slot=>1},
-            {:value=>"15:00", :name=>" 3:00 pm", :slot=>1, :disabled=>true, :slot_end=>true}
-          ]
-        )
+      context "without bookings" do
+        it "shows the available time slots" do
+          Timecop.freeze(Time.local(2017, 11, 13)) do
+            time_slot1
+            time_slot2
+            expect(options_for_listing_and_date(listing, date)).to eq(
+              [
+                {:value=>"09:00", :name=>" 9:00 am", :slot=>0},
+                {:value=>"10:00", :name=>"10:00 am", :slot=>0},
+                {:value=>"11:00", :name=>"11:00 am", :slot=>0, :disabled=>true, :slot_end=>true},
+                {:value=>"14:00", :name=>" 2:00 pm", :slot=>1},
+                {:value=>"15:00", :name=>" 3:00 pm", :slot=>1, :disabled=>true, :slot_end=>true}
+              ]
+            )
+          end
+        end
       end
-    end
 
-    it '#availability_per_hour_options_for_select_grouped_by_day is busy part day.' do
-      Timecop.freeze(Time.local(2017, 11, 13)) do
-        time_slot1
-        time_slot2
-        booking1
-        booking2
-        options = ListingPresenter.new(listing, community, {}, person)
-          .availability_per_hour_options_for_select_grouped_by_day
-        expect(options["2017-11-14"]).to eq(
-          [
-            {:value=>"09:00", :name=>" 9:00 am", :slot=>0, :disabled=>true, :booking_start=>true},
-            {:value=>"10:00", :name=>"10:00 am", :slot=>0, :disabled=>true, :booking_start=>true},
-            {:value=>"11:00", :name=>"11:00 am", :slot=>0, :disabled=>true, :slot_end=>true},
-            {:value=>"14:00", :name=>" 2:00 pm", :slot=>1},
-            {:value=>"15:00", :name=>" 3:00 pm", :slot=>1, :disabled=>true, :slot_end=>true}
-          ]
-        )
+      context "with bookings" do
+        it "is busy in the first time slot" do
+          Timecop.freeze(Time.local(2017, 11, 13)) do
+            time_slot1
+            time_slot2
+            booking1
+            booking2
+            expect(options_for_listing_and_date(listing, date)).to eq(
+              [
+                {:value=>"09:00", :name=>" 9:00 am", :slot=>0, :disabled=>true, :booking_start=>true},
+                {:value=>"10:00", :name=>"10:00 am", :slot=>0, :disabled=>true, :booking_start=>true},
+                {:value=>"11:00", :name=>"11:00 am", :slot=>0, :disabled=>true, :slot_end=>true},
+                {:value=>"14:00", :name=>" 2:00 pm", :slot=>1},
+                {:value=>"15:00", :name=>" 3:00 pm", :slot=>1, :disabled=>true, :slot_end=>true}
+              ]
+            )
+          end
+        end
+
+        it "is not blocked by rejected bookings" do
+          Timecop.freeze(Time.local(2017, 11, 13)) do
+            time_slot1
+            time_slot2
+            booking4
+            expect(options_for_listing_and_date(listing, date)).to eq(
+              [
+                {:value=>"09:00", :name=>" 9:00 am", :slot=>0},
+                {:value=>"10:00", :name=>"10:00 am", :slot=>0},
+                {:value=>"11:00", :name=>"11:00 am", :slot=>0, :disabled=>true, :slot_end=>true},
+                {:value=>"14:00", :name=>" 2:00 pm", :slot=>1},
+                {:value=>"15:00", :name=>" 3:00 pm", :slot=>1, :disabled=>true, :slot_end=>true}
+              ]
+            )
+          end
+        end
+
+        context "another listing from same person" do
+          let(:another_listing) { FactoryGirl.create(:listing, :author => listing.author, community_id: community.id, listing_shape_id: 123) }
+          let(:time_slot3) { FactoryGirl.create(:listing_working_time_slot, listing: another_listing, week_day: :tue, from: '09:00', till: '11:00') }
+          let(:time_slot4) { FactoryGirl.create(:listing_working_time_slot, listing: another_listing, week_day: :tue, from: '14:00', till: '15:00') }
+          let(:transaction5) { FactoryGirl.create(:transaction, community: community, listing: another_listing, current_state: 'paid') }
+          let(:booking5) { FactoryGirl.create(:booking, tx: transaction5, start_time: '2017-11-14 10:00', end_time: '2017-11-14 11:00', per_hour: true) }
+
+          let(:expected_options_for_date) do
+            [
+              {:value=>"09:00", :name=>" 9:00 am", :slot=>0, :disabled=>true, :booking_start=>true},
+              {:value=>"10:00", :name=>"10:00 am", :slot=>0, :disabled=>true, :booking_start=>true},
+              {:value=>"11:00", :name=>"11:00 am", :slot=>0, :disabled=>true, :slot_end=>true},
+              {:value=>"14:00", :name=>" 2:00 pm", :slot=>1},
+              {:value=>"15:00", :name=>" 3:00 pm", :slot=>1, :disabled=>true, :slot_end=>true}
+            ]
+          end
+
+          it "is blocked by all listings accepted bookings" do
+            Timecop.freeze(Time.local(2017, 11, 13)) do
+              time_slot1
+              time_slot2
+              time_slot3
+              time_slot4
+              booking1
+              booking5
+              expect(options_for_listing_and_date(another_listing, date)).to eq(
+                expected_options_for_date
+              )
+            end
+          end
+
+          it "is the same result for other presented listings" do
+            Timecop.freeze(Time.local(2017, 11, 13)) do
+              time_slot1
+              time_slot2
+              time_slot3
+              time_slot4
+              booking1
+              booking5
+              expect(options_for_listing_and_date(listing, date)).to eq(
+                expected_options_for_date
+              )
+            end
+          end
+        end
       end
-    end
 
-    it '#availability_per_hour_options_for_select_grouped_by_day rejected booking does not block.' do
-      Timecop.freeze(Time.local(2017, 11, 13)) do
-        time_slot1
-        time_slot2
-        booking4
-        options = ListingPresenter.new(listing, community, {}, person)
-          .availability_per_hour_options_for_select_grouped_by_day
-        expect(options["2017-11-14"]).to eq(
-          [
-            {:value=>"09:00", :name=>" 9:00 am", :slot=>0},
-            {:value=>"10:00", :name=>"10:00 am", :slot=>0},
-            {:value=>"11:00", :name=>"11:00 am", :slot=>0, :disabled=>true, :slot_end=>true},
-            {:value=>"14:00", :name=>" 2:00 pm", :slot=>1},
-            {:value=>"15:00", :name=>" 3:00 pm", :slot=>1, :disabled=>true, :slot_end=>true}
-          ]
-        )
+      private
+
+      def options_for_listing(listing_to_present)
+        presented_listing(listing_to_present). \
+          availability_per_hour_options_for_select_grouped_by_day
+      end
+
+      def options_for_listing_and_date(listing_to_present, date)
+        options_for_listing(listing_to_present)[date]
+      end
+
+      def presented_listing(listing_to_present)
+        ListingPresenter.new(listing_to_present, community, {}, person)
       end
     end
 
