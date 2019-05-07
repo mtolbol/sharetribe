@@ -174,6 +174,14 @@ class Listing < ApplicationRecord
   validates_inclusion_of :valid_until, :allow_nil => :true, :in => proc{ DateTime.now..DateTime.now + 7.months }
   validates_numericality_of :price_cents, :only_integer => true, :greater_than_or_equal_to => 0, :message => "price must be numeric", :allow_nil => true
 
+  def author_bookings_per_hour
+    author.bookings_per_hour
+  end
+
+  def author_working_time_slots
+    author.working_time_slots
+  end
+
   # sets the time to midnight
   def set_valid_until_time
     if valid_until

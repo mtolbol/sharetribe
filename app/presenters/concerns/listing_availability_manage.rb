@@ -143,7 +143,8 @@ module ListingAvailabilityManage
     result = []
     start = nil
     day_options = nil
-    listing.bookings_per_hour.in_period(booking_per_hour_start_time, booking_per_hour_end_time).find_each do |booking|
+
+    listing.author_bookings_per_hour.in_period(booking_per_hour_start_time, booking_per_hour_end_time).find_each do |booking|
       booking_day = booking.start_time.to_date.to_s
       day_options = all_options[booking_day]
       start = booking.start_time
