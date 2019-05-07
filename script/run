@@ -1,0 +1,1 @@
+foreman start -f Procfile.dev --formation="rails=1,worker=1"
