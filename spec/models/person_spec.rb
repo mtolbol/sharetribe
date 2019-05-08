@@ -66,6 +66,7 @@
 require 'spec_helper'
 
 describe Person, type: :model do
+  it { should have_many(:working_date_slots).through(:listings) }
   it { should have_many(:working_time_slots).through(:listings) }
   it { should have_many(:bookings_per_hour).through(:listings) }
 
