@@ -495,6 +495,12 @@ FactoryGirl.define do
     till       '17:00'
   end
 
+  factory :listing_working_date_slot, class: 'Listing::WorkingDateSlot' do
+    listing_id 123
+    from       '09:00'
+    till       '17:00'
+  end
+
   factory :billing_agreement do
     build_association(:paypal_account)
     billing_agreement_id  'zzz'
