@@ -15,6 +15,8 @@
 #  index_listing_working_date_slots_on_listing_id  (listing_id)
 #
 
+# This class keeps track of the hours open for a
+# given listing on a specific date
 class Listing::WorkingDateSlot < ApplicationRecord
   belongs_to :listing
 
