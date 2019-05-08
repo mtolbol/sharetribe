@@ -136,6 +136,20 @@ describe Listing, type: :model do
     let(:community) { FactoryGirl.create(:community) }
     let(:listing) { FactoryGirl.create(:listing, community_id: community.id, listing_shape_id: 123) }
 
+    describe "#working_hours_new_set" do
+      it "builds a new set" do
+        expect(listing.working_hours_new_set).to eq((Date.today..Date.today + 6))
+      end
+
+      context "forcing creation" do
+        it "creates a new set for the next week" do
+          expect { listing.working_hours_new_set(:force_create => true) }.to change {
+            Listing::WorkingDateSlot.count
+          }.from(0).to(7)
+        end
+      end
+    end
+
     it '#working_hours_periods_grouped_by_day' do
       listing.working_hours_new_set
       listing.save

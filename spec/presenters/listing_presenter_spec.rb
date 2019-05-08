@@ -36,8 +36,8 @@ RSpec.describe ListingPresenter, type: :presenter do
 
   context 'availability per hour' do
     let(:listing) { FactoryGirl.create(:listing, community_id: community.id, listing_shape_id: 123) }
-    let(:time_slot1) { FactoryGirl.create(:listing_working_time_slot, listing: listing, week_day: :tue, from: '09:00', till: '11:00') }
-    let(:time_slot2) { FactoryGirl.create(:listing_working_time_slot, listing: listing, week_day: :tue, from: '14:00', till: '15:00') }
+    let(:time_slot1) { FactoryGirl.create(:listing_working_date_slot, person_id: listing.author.id, date: "2017-11-14", from: '09:00', till: '11:00') }
+    let(:time_slot2) { FactoryGirl.create(:listing_working_date_slot, person_id: listing.author.id, date: "2017-11-14", from: '14:00', till: '15:00') }
     let(:transaction1) { FactoryGirl.create(:transaction, community: community, listing: listing, current_state: 'paid') }
     let(:transaction2) { FactoryGirl.create(:transaction, community: community, listing: listing, current_state: 'paid') }
     let(:transaction3) { FactoryGirl.create(:transaction, community: community, listing: listing, current_state: 'paid') }

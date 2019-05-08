@@ -179,6 +179,10 @@ class Listing < ApplicationRecord
     author.bookings_per_hour
   end
 
+  def author_working_date_slots
+    author.working_date_slots
+  end
+
   def author_working_time_slots
     author.working_time_slots
   end

@@ -23,6 +23,8 @@ class Listing::WorkingDateSlot < ApplicationRecord
   validate :from_is_less_than_till
   validate :conflicts_with_other
 
+  enum week_day: {sun: 0, mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6}
+
   scope :by_date, ->(date) { where(date: date) }
   scope :ordered, -> { order('listing_working_date_slots.date ASC, listing_working_date_slots.from ASC') }
 
