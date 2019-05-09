@@ -15,6 +15,8 @@
 #  index_listing_working_time_slots_on_listing_id  (listing_id)
 #
 
+# This class keeps track of the hours open for a given listing on a weekdays,
+# for the main purpose of repeating the hours across many weekdays in the future
 class Listing::WorkingTimeSlot < ApplicationRecord
   belongs_to :listing
 

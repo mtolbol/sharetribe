@@ -757,6 +757,21 @@ CREATE TABLE `listing_units` (
   KEY `index_listing_units_on_listing_shape_id` (`listing_shape_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `listing_working_date_slots`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `listing_working_date_slots` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `listing_id` bigint(20) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `from` varchar(255) DEFAULT NULL,
+  `till` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_listing_working_date_slots_on_listing_id` (`listing_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `listing_working_time_slots`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -2374,6 +2389,8 @@ INSERT INTO `schema_migrations` (version) VALUES
 ('20190227111355'),
 ('20190228084827'),
 ('20190305112030'),
+('20190319114719'),
 ('20190319122745'),
-('20190319114719');
+('20190507130434');
+
 
