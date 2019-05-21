@@ -3,16 +3,16 @@
 # Table name: listing_working_date_slots
 #
 #  id         :integer          not null, primary key
-#  listing_id :integer
 #  date       :date
 #  from       :string(255)
 #  till       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  person_id  :string(255)
 #
 # Indexes
 #
-#  index_listing_working_date_slots_on_listing_id  (listing_id)
+#  index_listing_working_date_slots_on_person_id  (person_id)
 #
 
 require 'spec_helper'
