@@ -1499,6 +1499,7 @@ en:
       on_or_after: "must be on or after %{restriction}"
       positive_number: "Insert a number."
       from_must_be_less_than_till: "\"Start time\" must be less than \"End time\""
+      conflicts_with_other: "Conflics with existing time period for same date."
   event_feed_events:
     accept:
       has_accepted_lend_item: "%{offerer_name} agreed to lend %{listing_title} to %{requester_name} %{time_ago}."

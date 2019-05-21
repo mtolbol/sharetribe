@@ -61,6 +61,90 @@ RSpec.describe Listing::WorkingDateSlot, type: :model do
     end
   end
 
+  describe "#conflicts_with_other validation" do
+    let!(:person) { FactoryGirl.create(:person) }
+    let!(:date_slot) do
+      create_slot(person, "2017-11-14", "9:00", "12:00")
+    end
+
+    context "when dates conflicts" do
+      let(:same_time_slot) do
+        build_slot(person, "2017-11-14", "9:00", "12:00")
+      end
+
+      it "is not valid when from and till times are an exact match" do
+        expect(same_time_slot).to_not be_valid
+      end
+
+      it "is not valid when from is within existing time period" do
+        same_time_slot.from = "10:00"
+        same_time_slot.till = "14:00"
+
+        expect(same_time_slot).to_not be_valid
+      end
+
+      it "is not valid when till is within existing time period" do
+        same_time_slot.from = "8:00"
+        same_time_slot.till = "10:00"
+
+        expect(same_time_slot).to_not be_valid
+      end
+
+      context "when new date slot is for another person" do
+        let!(:other_person) { FactoryGirl.create(:person) }
+
+        context "and the dates are exactly like existing time slot" do
+          let(:same_time_slot_another_person) do
+            build_slot(other_person, "2017-11-14", "9:00", "12:00")
+          end
+
+          it "is valid" do
+            expect(same_time_slot_another_person).to be_valid
+          end
+        end
+      end
+    end
+
+    context "when new slot does not conflict with existing working date slot" do
+      let(:different_time_slot) do
+        build_slot(person, "2017-11-14", "9:00", "10:00")
+      end
+
+      it "is valid when on different dates" do
+        different_time_slot.date = "2017-11-15"
+        expect(different_time_slot).to be_valid
+      end
+
+      it "is valid when same date but in a later time period" do
+        different_time_slot.from = "13:00"
+        different_time_slot.till = "14:00"
+        expect(different_time_slot).to be_valid
+      end
+
+      it "is valid when same date but in an earlier time period" do
+        different_time_slot.from = "7:00"
+        different_time_slot.till = "8:00"
+        expect(different_time_slot).to be_valid
+      end
+    end
+
+    private
+
+    def build_slot(person, date, from, till)
+      FactoryGirl.build(
+        :listing_working_date_slot,
+        :date => date,
+        :from => from,
+        :person => person,
+        :till => till
+      )
+    end
+
+    def create_slot(person, date, from, till)
+      build_slot(person, date, from, till).save!
+    end
+  end
+
   describe 'from till' do
     it 'Validates from is less than till' do
       working_date_slot = Listing::WorkingDateSlot.new
