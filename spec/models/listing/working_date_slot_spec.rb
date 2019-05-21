@@ -18,6 +18,10 @@
 require 'spec_helper'
 
 RSpec.describe Listing::WorkingDateSlot, type: :model do
+  subject { FactoryGirl.build(:listing_working_date_slot) }
+
+  it { should belong_to(:person) }
+
   describe ".ordered" do
     let!(:booking_later_date) { FactoryGirl.create(:listing_working_date_slot, :date => "2017-11-28", :from => "9:00", :till => "10:00") }
     let!(:booking_same_day) { FactoryGirl.create(:listing_working_date_slot, :date => "2017-11-14", :from => "9:00", :till => "10:00") }

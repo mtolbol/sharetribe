@@ -96,7 +96,7 @@ class Person < ApplicationRecord
   has_many :listings, -> { exist }, :dependent => :destroy, :foreign_key => "author_id"
   has_many :bookings_per_hour, ->{ per_hour_blocked }, :through => :listings
   has_many :working_time_slots, :through => :listings, :class_name => "Listing::WorkingTimeSlot"
-  has_many :working_date_slots, :through => :listings, :class_name => "Listing::WorkingDateSlot"
+  has_many :working_date_slots, :class_name => "Listing::WorkingDateSlot"
   has_many :emails, :dependent => :destroy, :inverse_of => :person
 
   has_one :location, -> { where(location_type: :person) }, :dependent => :destroy

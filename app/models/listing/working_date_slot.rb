@@ -18,7 +18,7 @@
 # This class keeps track of the hours open for a
 # given listing on a specific date
 class Listing::WorkingDateSlot < ApplicationRecord
-  belongs_to :listing
+  belongs_to :person
 
   validate :from_is_less_than_till
 

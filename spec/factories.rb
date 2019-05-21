@@ -496,7 +496,7 @@ FactoryGirl.define do
   end
 
   factory :listing_working_date_slot, class: 'Listing::WorkingDateSlot' do
-    listing_id 123
+    person_id "ABC"
     from       '09:00'
     till       '17:00'
   end
