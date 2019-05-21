@@ -1,0 +1,6 @@
+- date_slot_presenter = WorkingDateSlotPresenter.new
+
+.row
+  .col-8.listing-details-container
+    = form_for(@working_date_slot, :url => working_date_slot_path(@working_date_slot), :method => :patch) do |form|
+      = render :partial => "inputs", :locals => {:form => form, :working_date_slot => @working_date_slot, :current_user => @current_user}

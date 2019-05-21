@@ -2832,3 +2832,13 @@ da-DK:
       category_description: ~
       profile_title: ~
       profile_description: ~
+
+  working_date_slots:
+    inputs:
+      submit: "Opret tid på dato"
+    index:
+      date: "Dato"
+      from: "Fra kl."
+      till: "Til kl."
+      actions: "handlinger"
+      edit: "Rediger"

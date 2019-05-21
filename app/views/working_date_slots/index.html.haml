@@ -1,0 +1,28 @@
+.row
+  - date_slot_presenter = WorkingDateSlotPresenter.new
+
+  .col-8.listing-details-container
+    %table
+      %thead
+        %th= translate(".date")
+        %th= translate(".from")
+        %th= translate(".till")
+        %th= translate(".actions")
+      %tbody
+        - @working_date_slots.each do |slot|
+          %tr
+            %td
+              = localize(slot.date)
+            %td
+              = slot.from
+            %td
+              = slot.till
+            %td
+              = link_to(translate(".edit"), edit_working_date_slot_path(slot))
+
+  .col-4
+    .row-with-divider
+      .col-12
+        .listing-message-links
+          = form_for(@working_date_slot, :url => working_date_slots_path) do |form|
+            = render :partial => "inputs", :locals => {:form => form, :working_date_slot => @working_date_slot, :current_user => @current_user}
