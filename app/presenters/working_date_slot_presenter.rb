@@ -1,6 +1,4 @@
 class WorkingDateSlotPresenter < MemoisticPresenter
-  include ListingAvailabilityManage
-
   def time_slot_options
     (0..24).map do |x|
       value = format("%02d:00", x)
