@@ -3,21 +3,25 @@
 # Table name: listing_working_date_slots
 #
 #  id         :integer          not null, primary key
-#  listing_id :integer
 #  date       :date
 #  from       :string(255)
 #  till       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  person_id  :string(255)
 #
 # Indexes
 #
-#  index_listing_working_date_slots_on_listing_id  (listing_id)
+#  index_listing_working_date_slots_on_person_id  (person_id)
 #
 
 require 'spec_helper'
 
 RSpec.describe Listing::WorkingDateSlot, type: :model do
+  subject { FactoryGirl.build(:listing_working_date_slot) }
+
+  it { should belong_to(:person) }
+
   describe ".ordered" do
     let!(:booking_later_date) { FactoryGirl.create(:listing_working_date_slot, :date => "2017-11-28", :from => "9:00", :till => "10:00") }
     let!(:booking_same_day) { FactoryGirl.create(:listing_working_date_slot, :date => "2017-11-14", :from => "9:00", :till => "10:00") }

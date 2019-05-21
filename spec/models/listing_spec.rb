@@ -68,7 +68,6 @@
 require 'spec_helper'
 
 describe Listing, type: :model do
-  it { should have_many(:working_date_slots) }
   it { should have_many(:working_time_slots) }
 
   before(:each) do
