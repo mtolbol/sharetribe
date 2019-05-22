@@ -1,4 +1,10 @@
 en:
+  activerecord:
+    attributes:
+      listing/working_date_slot:
+        date: "Date"
+        from: "From"
+        till: "To"
   number:
     currency:
       format:
