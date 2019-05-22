@@ -124,12 +124,10 @@ describe Listing, type: :model do
   end
 
   context "with listing type 'offer'" do
-
     it "should be valid when there is no valid until" do
       @listing.valid_until = nil
       expect(@listing).to be_valid
     end
-
   end
 
   context 'manage availability per hour' do
@@ -137,15 +135,17 @@ describe Listing, type: :model do
     let(:listing) { FactoryGirl.create(:listing, community_id: community.id, listing_shape_id: 123) }
 
     describe "#working_hours_new_set" do
-      it "builds a new set" do
-        expect(listing.working_hours_new_set).to eq((Date.today..Date.today + 6))
+      it "is disabled" do
+        expect(listing.working_hours_new_set).to eq(
+          []
+        )
       end
 
       context "forcing creation" do
-        it "creates a new set for the next week" do
-          expect { listing.working_hours_new_set(:force_create => true) }.to change {
-            Listing::WorkingDateSlot.count
-          }.from(0).to(7)
+        it "does not create a new set for the next week" do
+          expect { listing.working_hours_new_set(:force_create => true) }.to_not change {
+            Listing::WorkingTimeSlot.count
+          }
         end
       end
     end
@@ -154,11 +154,7 @@ describe Listing, type: :model do
       listing.working_hours_new_set
       listing.save
       periods = listing.working_hours_periods_grouped_by_day(Time.zone.parse('2017-11-13'), Time.zone.parse('2017-11-19'))
-      expect(periods.keys).to eq ["2017-11-13", "2017-11-14", "2017-11-15", "2017-11-16", "2017-11-17"]
-      ["2017-11-13", "2017-11-14", "2017-11-15", "2017-11-16", "2017-11-17"].each do |date|
-        expect(periods[date].first.start_time.to_s).to eq "#{date} 09:00:00 UTC"
-        expect(periods[date].first.end_time.to_s).to eq "#{date} 17:00:00 UTC"
-      end
+      expect(periods.keys).to be_empty
     end
   end
 

@@ -2,6 +2,8 @@ module ManageAvailabilityPerHour
   extend ActiveSupport::Concern
 
   def working_hours_new_set(force_create: false)
+    return [] # disable feature
+
     return if per_hour_ready
     Listing::WorkingTimeSlot.week_days.keys.each do |week_day|
       next if ['sun', 'sat'].include?(week_day)
