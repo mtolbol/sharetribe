@@ -203,7 +203,7 @@ module ListingAvailabilityManage
         uuid: @current_community.uuid_object.to_s,
         marketplace_color1: CommonStylesHelper.marketplace_colors(@current_community)[:marketplace_color1],
       },
-      listing: working_time_slots,
+      listing: working_date_slots,
       time_slot_options: time_slot_options,
       day_names: day_names,
       listing_just_created: !!params[:listing_just_created] || !listing.per_hour_ready,
@@ -225,6 +225,10 @@ module ListingAvailabilityManage
   def working_time_slots
     listing.working_hours_new_set if params[:listing_just_created] || !listing.per_hour_ready
     listing.working_hours_as_json
+  end
+
+  def working_date_slots
+    listing.working_dates_as_json
   end
 
   def time_slot_options

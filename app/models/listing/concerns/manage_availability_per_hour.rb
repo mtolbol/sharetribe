@@ -1,29 +1,15 @@
 module ManageAvailabilityPerHour
   extend ActiveSupport::Concern
 
-  # def working_hours_new_set(force_create: false)
-  #   return if per_hour_ready
-  #   Listing::WorkingTimeSlot.week_days.keys.each do |week_day|
-  #     next if ['sun', 'sat'].include?(week_day)
-  #     if force_create
-  #       working_time_slots.create(week_day: week_day, from: '09:00', till: '17:00')
-  #       update_column(:per_hour_ready, true) # rubocop:disable Rails/SkipsModelValidations
-  #     else
-  #       working_time_slots.build(week_day: week_day, from: '09:00', till: '17:00')
-  #     end
-  #   end
-  # end
-
   def working_hours_new_set(force_create: false)
     return if per_hour_ready
-    dates_for_next_week = (Date.today..Date.today + 6)
-    dates_for_next_week.each do |date|
-      next if ['sun', 'sat'].include?(date.wday)
+    Listing::WorkingTimeSlot.week_days.keys.each do |week_day|
+      next if ['sun', 'sat'].include?(week_day)
       if force_create
-        working_date_slots.create(date: date, from: '09:00', till: '17:00')
+        working_time_slots.create(week_day: week_day, from: '09:00', till: '17:00')
         update_column(:per_hour_ready, true) # rubocop:disable Rails/SkipsModelValidations
       else
-        working_date_slots.build(date: date, from: '09:00', till: '17:00')
+        working_time_slots.build(week_day: week_day, from: '09:00', till: '17:00')
       end
     end
   end
@@ -31,6 +17,12 @@ module ManageAvailabilityPerHour
   def working_hours_as_json
     as_json(only: [:id, :title],  include: {
       working_time_slots: { only: [:id, :week_day, :from, :till], methods: :errors }
+    })
+  end
+
+  def working_dates_as_json
+    as_json(only: [:id, :title],  include: {
+      working_date_slots: { only: [:id, :date, :from, :till], methods: :errors }
     })
   end
 
