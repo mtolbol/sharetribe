@@ -1,4 +1,10 @@
 da-DK:
+  activerecord:
+    attributes:
+      listing/working_date_slot:
+        date: "Dato"
+        from: "Fra"
+        till: "Til"
   number:
     currency:
       format:
