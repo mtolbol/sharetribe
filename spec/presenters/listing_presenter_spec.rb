@@ -36,8 +36,8 @@ RSpec.describe ListingPresenter, type: :presenter do
 
   context 'availability per hour' do
     let(:listing) { FactoryGirl.create(:listing, community_id: community.id, listing_shape_id: 123) }
-    let(:time_slot1) { FactoryGirl.create(:listing_working_time_slot, listing: listing, week_day: :tue, from: '09:00', till: '11:00') }
-    let(:time_slot2) { FactoryGirl.create(:listing_working_time_slot, listing: listing, week_day: :tue, from: '14:00', till: '15:00') }
+    let(:date_slot1) { FactoryGirl.create(:listing_working_date_slot, person: listing.author, date: Date.new(2017, 11, 14), from: '09:00', till: '11:00') }
+    let(:date_slot2) { FactoryGirl.create(:listing_working_date_slot, person: listing.author, date: Date.new(2017, 11, 14), from: '14:00', till: '15:00') }
     let(:transaction1) { FactoryGirl.create(:transaction, community: community, listing: listing, current_state: 'paid') }
     let(:transaction2) { FactoryGirl.create(:transaction, community: community, listing: listing, current_state: 'paid') }
     let(:transaction3) { FactoryGirl.create(:transaction, community: community, listing: listing, current_state: 'paid') }
@@ -52,8 +52,8 @@ RSpec.describe ListingPresenter, type: :presenter do
       it "2017-11-14 is busy full day.
         2017-11-13, 2017-11-15 no working hours" do
         Timecop.freeze(Time.local(2017, 11, 13)) do
-          time_slot1
-          time_slot2
+          date_slot1
+          date_slot2
           booking1
           booking2
           booking3
@@ -68,8 +68,8 @@ RSpec.describe ListingPresenter, type: :presenter do
       it "2017-11-14 is busy part day.
         2017-11-13, 2017-11-15 no working hours" do
         Timecop.freeze(Time.local(2017, 11, 13)) do
-          time_slot1
-          time_slot2
+          date_slot1
+          date_slot2
           booking1
           booking2
           blocked_days = ListingPresenter.new(listing, community, {}, person)
@@ -87,8 +87,8 @@ RSpec.describe ListingPresenter, type: :presenter do
       context "without bookings" do
         it "shows the available time slots" do
           Timecop.freeze(Time.local(2017, 11, 13)) do
-            time_slot1
-            time_slot2
+            date_slot1
+            date_slot2
             expect(options_for_listing_and_date(listing, date)).to eq(
               [
                 {:value=>"09:00", :name=>" 9:00 am", :slot=>0},
@@ -105,8 +105,8 @@ RSpec.describe ListingPresenter, type: :presenter do
       context "with bookings" do
         it "is busy in the first time slot" do
           Timecop.freeze(Time.local(2017, 11, 13)) do
-            time_slot1
-            time_slot2
+            date_slot1
+            date_slot2
             booking1
             booking2
             expect(options_for_listing_and_date(listing, date)).to eq(
@@ -123,8 +123,8 @@ RSpec.describe ListingPresenter, type: :presenter do
 
         it "is not blocked by rejected bookings" do
           Timecop.freeze(Time.local(2017, 11, 13)) do
-            time_slot1
-            time_slot2
+            date_slot1
+            date_slot2
             booking4
             expect(options_for_listing_and_date(listing, date)).to eq(
               [
@@ -140,8 +140,6 @@ RSpec.describe ListingPresenter, type: :presenter do
 
         context "another listing from same person" do
           let(:another_listing) { FactoryGirl.create(:listing, :author => listing.author, community_id: community.id, listing_shape_id: 123) }
-          let(:time_slot3) { FactoryGirl.create(:listing_working_time_slot, listing: another_listing, week_day: :tue, from: '09:00', till: '11:00') }
-          let(:time_slot4) { FactoryGirl.create(:listing_working_time_slot, listing: another_listing, week_day: :tue, from: '14:00', till: '15:00') }
           let(:transaction5) { FactoryGirl.create(:transaction, community: community, listing: another_listing, current_state: 'paid') }
           let(:booking5) { FactoryGirl.create(:booking, tx: transaction5, start_time: '2017-11-14 10:00', end_time: '2017-11-14 11:00', per_hour: true) }
 
@@ -157,10 +155,8 @@ RSpec.describe ListingPresenter, type: :presenter do
 
           it "is blocked by all listings accepted bookings" do
             Timecop.freeze(Time.local(2017, 11, 13)) do
-              time_slot1
-              time_slot2
-              time_slot3
-              time_slot4
+              date_slot1
+              date_slot2
               booking1
               booking5
               expect(options_for_listing_and_date(another_listing, date)).to eq(
@@ -171,10 +167,8 @@ RSpec.describe ListingPresenter, type: :presenter do
 
           it "is the same result for other presented listings" do
             Timecop.freeze(Time.local(2017, 11, 13)) do
-              time_slot1
-              time_slot2
-              time_slot3
-              time_slot4
+              date_slot1
+              date_slot2
               booking1
               booking5
               expect(options_for_listing_and_date(listing, date)).to eq(
