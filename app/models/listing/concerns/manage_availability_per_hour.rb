@@ -21,10 +21,8 @@ module ManageAvailabilityPerHour
   end
 
   def working_hours_covers_booking?(booking)
-    author_working_time_slots.by_week_day(booking.week_day).each do |time_slot|
-      return true if time_slot.covers_booking?(booking)
-    end
-    false
+    slots_for_date = author_working_date_slots.by_date(booking.start_time.to_date)
+    slots_for_date.any? { |date_slot| date_slot.covers_booking?(booking) }
   end
 
   def working_hours_periods_grouped_by_day(start_time, end_time)
