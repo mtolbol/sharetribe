@@ -92,7 +92,6 @@ class Listing < ApplicationRecord
   has_and_belongs_to_many :followers, :class_name => "Person", :join_table => "listing_followers"
 
   belongs_to :category
-  has_many :working_date_slots, ->{ ordered }, dependent: :destroy
   has_many :working_time_slots, ->{ ordered },  dependent: :destroy
   accepts_nested_attributes_for :working_time_slots, reject_if: :all_blank, allow_destroy: true
 
@@ -177,6 +176,10 @@ class Listing < ApplicationRecord
 
   def author_bookings_per_hour
     author.bookings_per_hour
+  end
+
+  def author_working_date_slots
+    author.working_date_slots
   end
 
   def author_working_time_slots

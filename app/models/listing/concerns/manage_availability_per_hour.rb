@@ -21,24 +21,13 @@ module ManageAvailabilityPerHour
   end
 
   def working_hours_covers_booking?(booking)
-    author_working_time_slots.by_week_day(booking.week_day).each do |time_slot|
-      return true if time_slot.covers_booking?(booking)
-    end
-    false
-  end
-
-  def working_hours_periods_grouped_by_day(start_time, end_time)
-    working_hours_periods(start_time, end_time).group_by{ |x| x.start_time.to_date.to_s }
+    slots_for_date = author_working_date_slots.by_date(booking.start_time.to_date)
+    slots_for_date.any? { |date_slot| date_slot.covers_booking?(booking) }
   end
 
   # returns multiple segments per day
-  # <Biz::TimeSegment @start_time=2017-11-15 09:00:00 UTC, @end_time=2017-11-15 17:00:00 UTC>
   def working_hours_periods(start_time, end_time)
-    if author_working_time_slots.any?
-      working_hours_listing_schedule.periods.after(start_time).timeline.until(end_time).to_a
-    else
-      []
-    end
+    author_working_date_slots.where(:date => Range.new(start_time, end_time))
   end
 
   private
