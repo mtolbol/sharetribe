@@ -1,1 +1,1 @@
-foreman start -f Procfile.dev --formation="rails=1,worker=1"
+foreman start -f Procfile.dev --formation="rails=1,worker=1,rails-client-assets=1,rails-server-assets=1"
