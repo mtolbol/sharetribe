@@ -2290,7 +2290,7 @@ da-DK:
         other: "Du har ikke adgang til serveren %{service_name}. For at få adgang skal du bruge en godkendt emailadresse."
       family_name: Efternavn
       given_name: Fornavn
-      i_accept_the_terms_and_privacy: "Jeg accepterer %{terms} og %{privacy}"
+      i_accept_the_terms_and_privacy: "Jeg accepterer %{terms}"
       admin_emails_consent: "Jeg accepterer at modtage mails fra %{service_name} og forstår at jeg kan ændre mine indstillinger når som helst."
       invalid_invitation_code: "Invitationskode er ikke gyldig."
       invitation_code: Invitationskode
