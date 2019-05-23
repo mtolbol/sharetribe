@@ -25,10 +25,6 @@ module ManageAvailabilityPerHour
     slots_for_date.any? { |date_slot| date_slot.covers_booking?(booking) }
   end
 
-  def working_hours_periods_grouped_by_day(start_time, end_time)
-    working_hours_periods(start_time, end_time).group_by{ |x| x.start_time.to_date.to_s }
-  end
-
   # returns multiple segments per day
   def working_hours_periods(start_time, end_time)
     author_working_date_slots.where(:date => Range.new(start_time, end_time))
