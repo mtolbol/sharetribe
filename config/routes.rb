@@ -363,6 +363,8 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :working_date_slots, :only => [:index, :create, :edit, :update]
+
     resources :listings do
       member do
         post :follow
