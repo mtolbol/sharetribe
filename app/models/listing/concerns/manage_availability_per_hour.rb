@@ -33,16 +33,7 @@ module ManageAvailabilityPerHour
 
   # returns multiple segments per day
   def working_hours_periods(start_time, end_time)
-    working_date_slots = author_working_date_slots.where(:date => Range.new(start_time, end_time))
-    if working_date_slots.any?
-      working_date_slots.map do |working_date_slot|
-        from = working_date_slot.from_time.to_datetime
-        till = working_date_slot.till_time.to_datetime
-        OpenStruct.new(:start_time => from, :end_time => till)
-      end
-    else
-      []
-    end
+    author_working_date_slots.where(:date => Range.new(start_time, end_time))
   end
 
   private

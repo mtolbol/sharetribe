@@ -51,10 +51,12 @@ class Listing::WorkingDateSlot < ApplicationRecord
   def from_time
     Time.zone.parse("#{date} #{from}")
   end
+  alias start_time from_time
 
   def till_time
     Time.zone.parse("#{date} #{till}")
   end
+  alias end_time till_time
 
   private
 
