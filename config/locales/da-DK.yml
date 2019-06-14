@@ -277,9 +277,9 @@ da-DK:
         ban_user_confirmation: "Dette sletter brugeren fra markedspladsen og hindrer ham/hende i at logge ind på markedspladsen igen med denne bruger. Er du sikker på at du vil fortsætte?"
         unban_user_confirmation: ~
         ban_me_error: "Du kan ikke forbyde dig selv."
-        search: ~
-        search_by_name_email: ~
-        reset_search: ~
+        search: "Søg"
+        search_by_name_email: "Søg efter e-mail"
+        reset_search: "Nulstil søgning"
         for_search_terms: ~
         this_makes_the_user_an_admin: ~
         status_filter:
@@ -445,15 +445,15 @@ da-DK:
         search: ~
         reset_search: ~
         status_filter:
-          all: ~
-          selected: ~
+          all: "Alle"
+          selected: "Valgt"
           selected_js: ~
-          free: ~
-          confirmed: ~
-          paid: ~
-          canceled: ~
-          preauthorized: ~
-          rejected: ~
+          free: "Ledig"
+          confirmed: "Bekræftet"
+          paid: "Betalt"
+          canceled: "Annulleret"
+          preauthorized: "Forhåndsgodkendt"
+          rejected: "Afvist"
         headers:
           conversation: Samtaletråd
           listing: Annonce
@@ -464,56 +464,56 @@ da-DK:
           initiated_by: Starter
           other_party: "Tredje part"
         status:
-          conversation: ~
-          free: ~
-          pending: Venter
-          preauthorized: Preauthorized
-          accepted: Accepteret
-          rejected: Afvist
-          paid: Betalt
-          confirmed: Godkendt
-          canceled: Annulleret
+          conversation: "Samtale"
+          free: "Ledig"
+          pending: "Venter"
+          preauthorized: "Forhåndsgodkendt"
+          accepted: "Accepteret"
+          rejected: "Afvist"
+          paid: "Betalt"
+          confirmed: "Godkendt"
+          canceled: "Annulleret"
           initiated: "Venter på PayPal betalingen"
           pending_ext: "Venter på PayPal betalingen"
           none:
-            free: ~
+            free: "Ledig"
           paypal:
-            free: ~
-            pending: ~
-            preauthorized: ~
-            accepted: Accepteret
-            rejected: Afvist
-            paid: Betalt
+            free: "Ledig"
+            pending: "Afventer"
+            preauthorized: "Forhåndsgodkendt"
+            accepted: "Accepteret"
+            rejected: "Afvist"
+            paid: "Betalt"
             confirmed: Bekræftet
             canceled: Annulleret
             initiated: "Afventer PayPal betaling"
             pending_ext: "Afventer PayPal betaling"
           stripe:
-            free: ~
-            pending: ~
-            preauthorized: ~
-            accepted: ~
-            rejected: ~
-            paid: ~
-            confirmed: ~
-            canceled: ~
-            initiated: ~
+            free: "Ledig"
+            pending: "Afventer"
+            preauthorized: "Forhåndsgodkendt"
+            accepted: "Accepteret"
+            rejected: "Afvist"
+            paid: "Betalt"
+            confirmed: "Bekræftet"
+            canceled: "Annulleret"
+            initiated: "Indledt"
             pending_ext: ~
         not_available: "Ikke tilgængelig"
       conversations:
-        conversations: ~
+        conversations: "Samtaler"
         headers:
-          started_from: ~
-          status: ~
-          started: ~
-          last_activity: ~
-          initiated_by: ~
-          other_party: ~
-        participants: ~
-        profile: ~
-        search_by_keyword: ~
-        search: ~
-        reset_search: ~
+          started_from: "Startet"
+          status: "Status"
+          started: "Startet"
+          last_activity: "Seneste aktivitet"
+          initiated_by: "Påbegyndt af"
+          other_party: "Modpart"
+        participants: "Deltagere"
+        profile: "Profil"
+        search_by_keyword: "Søg efter nøgleord"
+        search: "Søg"
+        reset_search: "Nulstil søgning"
         for_keyword: ~
       testimonials:
         testimonials: ~
