@@ -555,47 +555,47 @@ da-DK:
           deleting_info: ~
           blocking_info: ~
       invitations:
-        invitations: ~
+        invitations: "Invitationer"
         used:
-          "yes": ~
-          "no": ~
+          "yes": "Ja"
+          "no": "Nej
         headers:
-          sent_by: ~
-          message: ~
-          sent_to: ~
-          used: ~
-          date_sent: ~
+          sent_by: "Sendt af"
+          message: "Besked"
+          sent_to: "Sendt til"
+          used: "Benyttet"
+          date_sent: "Afsendt dato"
       listings:
-        listings: ~
-        search_by_title_author_category: ~
+        listings: Annoncer
+        search_by_title_author_category: Søg på titel
         search: "Søg"
-        reset_search: ~
+        reset_search: "Nulstil søgning"
         status:
-          all: ~
+          all: "Alle"
           selected_js: ~
-          open: ~
-          closed: ~
-          expired: ~
+          open: "Åben"
+          closed: "Lukket"
+          expired: "Udløbet"
           approval_pending: ~
           approval_rejected: ~
         headers:
-          title: ~
-          author: ~
-          created: ~
-          updated: ~
-          category: ~
-          status: ~
-        open: ~
-        closed: ~
-        expired: ~
-        approved: ~
+          title: "Titel"
+          author: "Oprettet af"
+          created: "Oprettet den"
+          updated: "Senest opdateret"
+          category: "Kategori"
+          status: "Status"
+        open: "Åben"
+        closed: "Lukket"
+        expired: "Udløbet"
+        approved: "Godkendt"
         approval_pending: ~
         approval_rejected: ~
         form:
           this_listing_has_not_not_been_approved_yet: ~
-          approve: ~
-          reject: ~
-          cancel: ~
+          approve: "Godkend"
+          reject: "Afslå"
+          cancel: "Annuller"
       user_fields:
         user_fields: ~
       footer:
@@ -1749,7 +1749,7 @@ da-DK:
       could_not_get_email_from_social_network: ~
       social_network_email_unconfirmed: ~
       create_new_listing: "Opret endnu en annonce"
-      create_one_here: "oprette en her"
+      create_one_here: "opret en her"
       email_confirmation_sent_to_new_address: "En bekræftelsesmail er nu sendt til den nye adresse."
       email_not_found: "Emailen findes ikke i %{service_name}s database."
       error_with_session: "Fejl ved session."
@@ -2157,7 +2157,7 @@ da-DK:
       read_more: Vis.
     stripe_payment:
       payment: Betaling
-      pay_with_card: "Betal med credit eller debit kort"
+      pay_with_card: "Betal med kredit eller debit kort"
       address: Leveringsadresse
       address_country: Land
       address_name: "For- og efternavne"
