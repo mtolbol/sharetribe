@@ -568,7 +568,7 @@ da-DK:
       listings:
         listings: ~
         search_by_title_author_category: ~
-        search: ~
+        search: "Søg"
         reset_search: ~
         status:
           all: ~
