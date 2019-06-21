@@ -281,23 +281,23 @@ da-DK:
         search_by_name_email: "Søg efter e-mail"
         reset_search: "Nulstil søgning"
         for_search_terms: ~
-        this_makes_the_user_an_admin: ~
+        this_makes_the_user_an_admin: "Dette gør brugeren til administrator"
         status_filter:
-          all: ~
-          selected: ~
+          all: "Alle"
+          selected: "Valgte"
           selected_js: ~
-          admin: ~
-          banned: ~
-          posting_allowed: ~
-          accepted: ~
-          unconfirmed: ~
-          pending: ~
-        this_user_hasnt_confirmed_their_email_address: ~
-        unconfirmed_user: ~
-        resend: ~
-        cancel: ~
-        user_didnt_complete_the_signup_process: ~
-        pending_user: ~
+          admin: "Administrator"
+          banned: "Afvist"
+          posting_allowed: "Annoncering tilladt"
+          accepted: "Accepteret"
+          unconfirmed: "Ikke bekræftet"
+          pending: "Afventende"
+        this_user_hasnt_confirmed_their_email_address: "Denne bruger har ikke bekræftet sin email"
+        unconfirmed_user: "Ikke bekræftet bruger"
+        resend: "Gensend"
+        cancel: "Annuller"
+        user_didnt_complete_the_signup_process: "Bruger har ikke færdiggjort sin tilmelding"
+        pending_user: "Afventende brugere"
       new_layout:
         new_layout: "Nyt layout"
         description_roadmap_new: ~
@@ -331,7 +331,7 @@ da-DK:
         invalid_facebook_connect_secret: "Client secret skal kun indehold tal og bogstaver fra a til f."
         enable_facebook_login: ~
         save: Gem
-        add_another_image: ~
+        add_another_image: "Tilføj endnu et billede"
         google_connect: ~
         google_instructions_link_text: ~
         google_connect_info_text_with_instructions: ~
@@ -392,7 +392,7 @@ da-DK:
         robots_info: ~
         robots_info_link_text: ~
         robots_info_2: ~
-        save: ~
+        save: "Gem"
       analytics:
         analytics: Analytics
         google_analytics_key: "Google Analytics Sporingskode (tracking ID)"
@@ -405,10 +405,10 @@ da-DK:
         end_user_analytics: ~
         save: Gem
       logo_link:
-        title: ~
-        info: ~
-        url: ~
-        placeholder: ~
+        title: "Titel"
+        info: "Info"
+        url: "URL"
+        placeholder: "Pladsholder"
       menu_links:
         menu_links: "Links i menuen"
         menu_links_display: ~
@@ -425,25 +425,25 @@ da-DK:
         max_number_of_links_info: "Link til %{about_page} vises altid som det første menu link"
         about_page: "om side"
       default_menu_links:
-        title: ~
-        about_link_title: ~
-        contact_link_title: ~
-        invite_link_title: ~
-        info: ~
-        display_about: ~
-        display_contact: ~
-        display_invite: ~
+        title: "Titel"
+        about_link_title: "Om link titel"
+        contact_link_title: "Kontakt link titel"
+        invite_link_title: "Invitér link titel"
+        info: "Info"
+        display_about: "Vis om"
+        display_contact: "Vis kontakt"
+        display_invite: "Vis invitation"
       topbar:
         topbar: "Top bjælke"
         new_listing_button_label: "Tekst på knappen \"Opret annonce\""
         invalid_post_listing_button_label: "Indtast venligst en gyldig tekst for \"Opret annonce\" knappen."
       transactions:
         export_all_as_csv: "Eksporter alle som CSV"
-        processing_export: ~
+        processing_export: "Eksporterer..."
         transactions: "Vis transaktioner"
-        search_by_title_parties: ~
-        search: ~
-        reset_search: ~
+        search_by_title_parties: "Søg efter titel"
+        search: "Søg"
+        reset_search: "Nulstil søgning"
         status_filter:
           all: "Alle"
           selected: "Valgt"
@@ -685,46 +685,46 @@ da-DK:
         dropdown: Dropdown
         checkbox_group: Tjekboks
         date: Dato
-        file: ~
-        location: ~
+        file: "Fil"
+        location: "Lokation"
     person_custom_fields:
-      saving_failed: ~
+      saving_failed: "Gem fejlede"
       index:
-        user_fields: ~
-        field_title: ~
-        field_type: ~
-        signup: ~
-        public: ~
-        add_new_field: ~
-        save: ~
-        cancel: ~
-        minimum_value: ~
-        maximum_value: ~
-        allow_decimals: ~
-        add_option: ~
+        user_fields: "Bruger felter"
+        field_title: "Felt titel"
+        field_type: "Felt type"
+        signup: "Tilmeld"
+        public: "Offentlig"
+        add_new_field: "Tilføj nyt felt"
+        save: "Gem"
+        cancel: "Annuller"
+        minimum_value: "Minimums værdi"
+        maximum_value: "Maximums værdi"
+        allow_decimals: "Tillad decimaler"
+        add_option: "Tilføj valgmulighed"
       new:
-        new_user_field: ~
+        new_user_field: "Nyt bruger felt"
       form:
         field_required:
-          this_field_is_required: ~
-          this_field_is_required_checkbox: ~
-          this_field_is_public: ~
+          this_field_is_required: "Dette felt er obligatorisk"
+          this_field_is_required_checkbox: "Dette felt er obligatorisk"
+          this_field_is_public: "Dette felt er offentligt2
       edit:
-        edit_user_field: ~
+        edit_user_field: "Tilpas felt"
     emails:
       new:
         send_email_to_members: "Send email til brugere"
         send_email_to_members_title: "Send email til alle dine brugere"
         send_email: "Send email"
         send_email_or: eller
-        send_test_email: ~
-        test_sent: ~
+        send_test_email: "Send test mail"
+        test_sent: "Test sendt"
         send_email_article_title: "denne artikel"
         send_email_article_text: "Du kan lære mere om bruger segmenter her %{article_link}."
         recipients:
-          title: ~
+          title: "Titel"
           options:
-            all_users: ~
+            all_users: "Alle brugere"
             posting_allowed: ~
             with_listing: ~
             with_listing_no_payment: ~
