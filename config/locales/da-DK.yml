@@ -92,8 +92,8 @@ da-DK:
         see_how_it_looks_like: "Se hvordan det ser ud"
         verification_to_post_listings_info_content: "Info tekst til besøgende som ikke er logget ind"
         verification_to_post_listings_info_content_description: "Du kræver på nuværende tidspunkt at brugere bliver godkendt manuelt af dig før de kan tilføje annoncer. Her kan du sætte standardteksten som bliver vist til ikke-godkendte brugere når de vil oprette en ny annonce."
-        verification_to_post_listings_info_content_default: "%{service_name} kræver at brugere bliver godkendt maduelt af en administrator før de kan oprette annoncer. Du er endnu ikke blevet godkendt. %{contact_admin_link} for at blive godkendt."
-        contact_admin_link_text: "Kontakt administratoren"
+        verification_to_post_listings_info_content_default: "Du er endnu ikke blevet godkendt. For at sikre en høj kvalitet på %{service_name}, er det nødvendigt at blive godkendt som fagperson, for at kunne oprette annoncer. Ønsker du at blive godkendt, kan du kontakte %{contact_admin_link} bag Tumlino."
+        contact_admin_link_text: "Teamet"
         save: Gem
         transaction_agreement: "Transaktions aftale"
         transaction_agreement_checkbox: "Gør det til et krav at brugerne skal acceptere transaktionsaftalen før en transaktion"
