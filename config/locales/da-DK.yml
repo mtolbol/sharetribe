@@ -1046,8 +1046,8 @@ da-DK:
       cancel_description: "Hvis din ordre ikke blev gennemført, kan du markere den som 'ikke gennemført'. Du kan stadig vurdere den anden part."
       cancel_payed_description: "Hvis din ansøgning er godkendt, men du har skiftet mening, kan du stadig nå at annullere din bestilling før betalingen bliver trukket."
       canceling_payed_transaction: "Annuller handel"
-      confirm: "Marker som success"
-      cancel: "Ikke sat"
+      confirm: "Gennemført"
+      cancel: "Ikke gennemført"
       continue: Fortsæt
       give_feedback_to: "Giv feedback til %{person_link}"
       do_not_give_feedback: "Spring over"
