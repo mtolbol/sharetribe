@@ -371,25 +371,17 @@ module CustomLandingPage
       "social_media_icon_color": {"type": "marketplace_data", "id": "primary_color"},
       "social_media_icon_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
       "links": [
-        {"label": "About", "href": {"type": "path", "id": "about"}},
-        {"label": "Contact us", "href": {"type": "path", "id": "contact_us"}},
-        {"label": "How to use?", "href": {"type": "path", "id": "how_to_use"}},
-        {"label": "Terms", "href": {"type": "path", "id": "terms"}},
-        {"label": "Privary", "href": {"type": "path", "id": "privacy"}},
-        {"label": "Invite new members", "href": {"type": "path", "id": "new_invitation"}},
-        {"label": "Sharetribe", "href": {"value": "https://www.sharetribe.com"}}
+        {"label": "Om os", "href": {"type": "path", "id": "about"}},
+        {"label": "Kontakt os", "href": {"type": "path", "id": "contact_us"}},
+        {"label": "FAQ", "href": {"type": "path", "id": "how_to_use"}},
+        {"label": "Handelsbetingelser", "href": {"type": "path", "id": "terms"}},
+        {"label": "Privatpolitik", "href": {"type": "path", "id": "privacy"}}
       ],
       "social": [
-        {"service": "facebook", "url": "https://www.facebook.com/Sharetribe/"},
-        {"service": "twitter", "url": "https://twitter.com/sharetribe"},
-        {"service": "instagram", "url": "https://www.instagram.com/"},
-        {"service": "youtube", "url": "https://www.youtube.com/channel/UCtefWVq2uu4pHXaIsHlBFnw"},
-        {"service": "googleplus", "url": "https://plus.google.com/114869130265262677354/"},
-        {"service": "linkedin", "url": "https://www.linkedin.com/company/2626583"},
-        {"service": "pinterest", "url": "https://www.pinterest.com/"},
-        {"service": "soundcloud", "url": "https://soundcloud.com/"}
+        {"service": "facebook", "url": "https://www.facebook.com/tumlino/"},
+        {"service": "instagram", "url": "https://www.instagram.com/tumlino/"}
       ],
-      "copyright": "Copyright Marketplace Ltd 2016"
+      "copyright": "Copyright Tumlino ApS, 2019"
     }
   ],
 
