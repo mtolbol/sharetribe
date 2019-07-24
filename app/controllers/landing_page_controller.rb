@@ -1,3 +1,5 @@
+require "custom_landing_page"
+
 class LandingPageController < ActionController::Metal
 
   # Shorthand for accessing CustomLandingPage service namespace
