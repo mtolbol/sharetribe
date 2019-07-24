@@ -68,12 +68,13 @@ module CustomLandingPage
       "paragraph": "Text paragraphs can contain Markdown markup. Limited subset of Markdown syntax blocks are allowed. Allowed blocks are *italic*, **bold**, ***bold+italic***, ~~strike through~~, _underline_ and [links](https://www.sharetribe.com).  \\nLine breaks and...\\n\\n...new paragraphs are also supported"
     },
     {
-      "id": "single_info_without_cta",
+      "id": "about_tumlino",
       "kind": "info",
       "variation": "single_column",
-      "title": "Single column info section without call to action button",
-      "paragraph": "This is a single column info section without background image and call to action button.",
-      "background_image": {"type": "assets", "id": "default_hero_background"}
+      "title": "Om Tumlino",
+      "paragraph": "Vi havde selv svært ved at finde hjælp!\\n\\nTumlino er et nyt koncept der gør det lettere for dig at finde, sammenligne og booke privat sundhedshjælp.\\n\\nDet er ret simpelt. Tumlino forbinder gravide, barslende og børnefamilier med kvalificeret hjælp fra private fagpersoner som f.eks. private jordemødre, ammerådgivere, fysioterapeuter, kiropraktorer og andre relevante fagpersoner.",
+      "background_image": {"type": "assets", "id": "photo/family"},
+      "background_image_variation": "transparent"
     },
     {
       "id": "single_info_with_background_and_cta",
@@ -357,9 +358,9 @@ module CustomLandingPage
   "composition": [
     { "section": {"type": "sections", "id": "hero"}},
     { "section": {"type": "sections", "id": "how_it_works"}},
+    { "section": {"type": "sections", "id": "about_tumlino"}},
     { "section": {"type": "sections", "id": "markdown_support"}},
     { "section": {"type": "sections", "id": "single_info_without_background_and_cta"}},
-    { "section": {"type": "sections", "id": "single_info_without_cta"}},
     { "section": {"type": "sections", "id": "single_info_with_cta"}},
     { "section": {"type": "sections", "id": "single_info_with_background_and_cta"}},
     { "section": {"type": "sections", "id": "single_info_with_background_color_and_cta"}},
