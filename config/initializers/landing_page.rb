@@ -102,6 +102,19 @@ module CustomLandingPage
       ]
     },
     {
+      "id": "get_started",
+      "kind": "info",
+      "variation": "single_column",
+      "title": "Kom i gang med det samme",
+      "paragraph": "Har du brug for hjælp eller har du spørgsmål?\\n\\nLad os hjælpe dig med at komme i gang med at bruge Tumlinos markedsplads.",
+      "background_image": {"type": "assets", "id": "photo/get_started"},
+      "background_image_variation": "transparent",
+      "button_color": {"type": "marketplace_data", "id": "primary_color"},
+      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
+      "button_title": "Kontakt os",
+      "button_path": {"type": "path", "id": "contact_us"}
+    },
+    {
       "id": "single_info_with_background_and_cta",
       "kind": "info",
       "variation": "single_column",
@@ -385,6 +398,7 @@ module CustomLandingPage
     { "section": {"type": "sections", "id": "how_it_works"}},
     { "section": {"type": "sections", "id": "about_tumlino"}},
     { "section": {"type": "sections", "id": "benefits"}},
+    { "section": {"type": "sections", "id": "get_started"}},
     { "section": {"type": "sections", "id": "markdown_support"}},
     { "section": {"type": "sections", "id": "single_info_without_background_and_cta"}},
     { "section": {"type": "sections", "id": "single_info_with_cta"}},
