@@ -153,34 +153,34 @@ module CustomLandingPage
       ]
     },
     {
-      "id": "three_column_info_with_icons_and_buttons",
+      "id": "how_it_works",
       "kind": "info",
       "variation": "multi_column",
-      "title": "Three column info with icons and buttons",
+      "title": "Sådan fungerer Tumlino",
       "button_color": {"type": "marketplace_data", "id": "primary_color"},
       "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
       "icon_color": {"type": "marketplace_data", "id": "primary_color"},
       "columns": [
         {
-          "title": "Column 1",
-          "icon": "quill",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.",
-          "button_title": "Go to sharetribe.com",
-          "button_path": {"value": "https://www.sharetribe.com"}
+          "title": "1. Find hjælp",
+          "icon": "account-find-1",
+          "paragraph": "Indtast din by eller den hjælp du har brug for og find fagpersoner i dit nærområde.",
+          "button_title": "Gå til markedspladsen",
+          "button_path": {"value": "/s"}
         },
         {
-          "title": "Column 2",
-          "icon": "piggy-bank",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.",
-          "button_title": "Go to sharetribe.com",
-          "button_path": {"value": "https://www.sharetribe.com"}
+          "title": "2. Sammenlign",
+          "icon": "task-checklist-check",
+          "paragraph": "Se fagpersonernes profil og få information om erfaring, uddanelse, priser og meget andet.",
+          "button_title": "Gå til FAQ",
+          "button_path": {"value": "/da-DK/infos/how_to_use"}
         },
         {
-          "title": "Column 3",
-          "icon": "globe-1",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.",
-          "button_title": "Go to sharetribe.com",
-          "button_path": {"value": "https://www.sharetribe.com"}
+          "title": "3. Book en tid",
+          "icon": "calendar-2",
+          "paragraph": "Vælg det tidspunkt som passer dig bedst og book med det samme.",
+          "button_title": "Kontakt os",
+          "button_path": {"value": "/da-DK/user_feedbacks/new"}
         }
       ]
     },
@@ -356,6 +356,7 @@ module CustomLandingPage
 
   "composition": [
     { "section": {"type": "sections", "id": "hero"}},
+    { "section": {"type": "sections", "id": "how_it_works"}},
     { "section": {"type": "sections", "id": "markdown_support"}},
     { "section": {"type": "sections", "id": "single_info_without_background_and_cta"}},
     { "section": {"type": "sections", "id": "single_info_without_cta"}},
@@ -364,7 +365,6 @@ module CustomLandingPage
     { "section": {"type": "sections", "id": "single_info_with_background_color_and_cta"}},
     { "section": {"type": "sections", "id": "two_column_info_with_icons_and_buttons"}},
     { "section": {"type": "sections", "id": "two_column_info_without_icons_and_buttons"}},
-    { "section": {"type": "sections", "id": "three_column_info_with_icons_and_buttons"}},
     { "section": {"type": "sections", "id": "three_column_info_without_icons_and_buttons"}},
     { "section": {"type": "sections", "id": "video"}},
     { "section": {"type": "sections", "id": "footer"}}
