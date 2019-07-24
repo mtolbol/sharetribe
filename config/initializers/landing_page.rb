@@ -77,6 +77,31 @@ module CustomLandingPage
       "background_image_variation": "transparent"
     },
     {
+      "id": "benefits",
+      "kind": "info",
+      "variation": "multi_column",
+      "title": "Fordelene ved Tumlino",
+      "button_color": {"type": "marketplace_data", "id": "primary_color"},
+      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
+      "icon_color": {"type": "marketplace_data", "id": "primary_color"},
+      "columns": [
+        {
+          "icon": "home-1",
+          "title": "Alt samlet ét sted",
+          "paragraph": "Tumlino samler alle private sundshedstilbud på én markedsplads. ",
+          "button_title": "Gå til markedspladsen",
+          "button_path": {"value": "/s"}
+        },
+        {
+          "icon": "location-pin-1",
+          "title": "Find hjælp nær dig",
+          "paragraph": "Hjælpen er oftere tættere på end du tror. På Tumlino kan hurtigt finde private fagpersoner nær dig.",
+          "button_title": "Gå til FAQ",
+          "button_path": {"value": "/da-DK/infos/how_to_use"}
+        }
+      ]
+    },
+    {
       "id": "single_info_with_background_and_cta",
       "kind": "info",
       "variation": "single_column",
@@ -359,6 +384,7 @@ module CustomLandingPage
     { "section": {"type": "sections", "id": "hero"}},
     { "section": {"type": "sections", "id": "how_it_works"}},
     { "section": {"type": "sections", "id": "about_tumlino"}},
+    { "section": {"type": "sections", "id": "benefits"}},
     { "section": {"type": "sections", "id": "markdown_support"}},
     { "section": {"type": "sections", "id": "single_info_without_background_and_cta"}},
     { "section": {"type": "sections", "id": "single_info_with_cta"}},
