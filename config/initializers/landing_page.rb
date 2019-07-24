@@ -371,7 +371,17 @@ module CustomLandingPage
   ],
 
   "assets": [
-    { "id": "default_hero_background", "src": "default_hero_background.jpg", "content_type": "image/jpeg" }
+    { "id": "default_hero_background", "src": "default_hero_background.jpg", "content_type": "image/jpeg" },
+    { "id": "icon/calendar", "src": "icons/calendar.png", "content_type": "image/png" },
+    { "id": "icon/certificate", "src": "icons/certificate.png", "content_type": "image/png" },
+    { "id": "icon/compare", "src": "icons/compare.png", "content_type": "image/png" },
+    { "id": "icon/description", "src": "icons/description.png", "content_type": "image/png" },
+    { "id": "icon/found", "src": "icons/found.png", "content_type": "image/png" },
+    { "id": "icon/happy_customers", "src": "icons/happy_customers.png", "content_type": "image/png" },
+    { "id": "icon/map", "src": "icons/map.png", "content_type": "image/png" },
+    { "id": "icon/notification", "src": "icons/notification.png", "content_type": "image/png" },
+    { "id": "icon/profile", "src": "icons/profile.png", "content_type": "image/png" },
+    { "id": "icon/under_one_roof", "src": "icons/under_one_roof.png", "content_type": "image/png" }
   ]
 }
 JSON
