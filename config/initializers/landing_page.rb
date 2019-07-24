@@ -54,20 +54,6 @@ module CustomLandingPage
       "text": "Video section can contain one Youtube video. Click to watch!"
     },
     {
-      "id": "single_info_without_background_and_cta",
-      "kind": "info",
-      "variation": "single_column",
-      "title": "Single column info section without background image and call to action button",
-      "paragraph": "This is a single column info section without background image and call to action button."
-    },
-    {
-      "id": "markdown_support",
-      "kind": "info",
-      "variation": "single_column",
-      "title": "Limited Markdown support",
-      "paragraph": "Text paragraphs can contain Markdown markup. Limited subset of Markdown syntax blocks are allowed. Allowed blocks are *italic*, **bold**, ***bold+italic***, ~~strike through~~, _underline_ and [links](https://www.sharetribe.com).  \\nLine breaks and...\\n\\n...new paragraphs are also supported"
-    },
-    {
       "id": "about_tumlino",
       "kind": "info",
       "variation": "single_column",
@@ -113,83 +99,6 @@ module CustomLandingPage
       "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
       "button_title": "Kontakt os",
       "button_path": {"type": "path", "id": "contact_us"}
-    },
-    {
-      "id": "single_info_with_background_and_cta",
-      "kind": "info",
-      "variation": "single_column",
-      "title": "Single column info section with background image and call to action button",
-      "paragraph": "This is a single column info section with background image and call to action button.",
-      "button_color": {"type": "marketplace_data", "id": "primary_color"},
-      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-      "button_title": "Go to sharetribe.com",
-      "button_path": {"value": "https://www.sharetribe.com"},
-      "background_image": {"type": "assets", "id": "default_hero_background"},
-      "background_image_variation": "dark"
-    },
-    {
-      "id": "single_info_with_cta",
-      "kind": "info",
-      "variation": "single_column",
-      "title": "Single column info section with call to action button",
-      "paragraph": "This is a single column info section with call to action button.",
-      "button_color": {"type": "marketplace_data", "id": "primary_color"},
-      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-      "button_title": "Contact us",
-      "button_path": {"type": "path", "id": "contact_us"}
-    },
-    {
-      "id": "single_info_with_background_color_and_cta",
-      "kind": "info",
-      "variation": "single_column",
-      "title": "Single column info section with background color and call to action button",
-      "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Nulla vitae elit libero.",
-      "button_color": {"type": "marketplace_data", "id": "primary_color"},
-      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-      "button_title": "About",
-      "button_path": {"type": "path", "id" :"about"},
-      "background_color": [166, 76, 94]
-    },
-    {
-      "id": "two_column_info_with_icons_and_buttons",
-      "kind": "info",
-      "variation": "multi_column",
-      "title": "Two column info section with icons and buttons",
-      "button_color": {"type": "marketplace_data", "id": "primary_color"},
-      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-      "icon_color": {"type": "marketplace_data", "id": "primary_color"},
-      "columns": [
-        {
-          "icon": "grape",
-          "title": "Column 1",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.\\n\\nParagraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.",
-          "button_title": "Go to sharetribe.com",
-          "button_path": {"value": "https://www.sharetribe.com"}
-        },
-        {
-          "icon": "watering-can",
-          "title": "Column 2",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.",
-          "button_title": "Go to sharetribe.com",
-          "button_path": {"value": "https://www.sharetribe.com"}
-        }
-      ]
-    },
-    {
-      "id": "two_column_info_without_icons_and_buttons",
-      "kind": "info",
-      "variation": "multi_column",
-      "title": "Two column info section without icons and buttons",
-      "columns": [
-        {
-          "title": "Column 1",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.\\n\\nParagraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        },
-        {
-          "title": "Column 2",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        }
-      ]
     },
     {
       "id": "how_it_works",
@@ -244,130 +153,9 @@ module CustomLandingPage
       ]
     },
     {
-      "id": "two_column_info_without_icons_and_buttons_with_sigle_button",
-      "kind": "info",
-      "variation": "multi_column",
-      "title": "Two column info section without icons and buttons",
-      "columns": [
-        {
-          "title": "Column 1",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.\\n\\nParagraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        },
-        {
-          "title": "Column 2",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        }
-      ],
-      "button_color": {"type": "marketplace_data", "id": "primary_color"},
-      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-      "button_title": "Contact us",
-      "button_path": {"type": "path", "id": "contact_us"}
-    },
-    {
-      "id": "three_column_info_without_icons_and_buttons_with_sigle_button",
-      "kind": "info",
-      "variation": "multi_column",
-      "title": "Three column info without icons and buttons",
-      "columns": [
-        {
-          "title": "Column 1",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        },
-        {
-          "title": "Column 2",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        },
-        {
-          "title": "Column 3",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel."
-        }
-      ],
-      "button_color": {"type": "marketplace_data", "id": "primary_color"},
-      "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-      "button_title": "Contact us",
-      "button_path": {"type": "path", "id": "contact_us"}
-    },
-    {
-        "id": "categories",
-        "kind": "categories",
-        "title": "Categories section",
-        "paragraph": "PLEASE NOTE: This section is NOT ENABLED by default. To enable this section, replace category IDs with real IDs and add the section to the 'composition'. Categories section can contain 3 to 7 featured categories. Each category should have a background image.",
-        "button_color": {"type": "marketplace_data", "id": "primary_color"},
-        "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-        "button_title": "All categories",
-        "button_path": {"type": "path", "id": "all_categories"},
-        "category_color_hover": {"type": "marketplace_data", "id": "primary_color"},
-        "categories": [
-            {
-                "category": { "type": "category", "id": 99999 },
-                "background_image": {"type": "assets", "id": "default_hero_background"}
-            },
-            {
-                "category": { "type": "category", "id": 99999 },
-                "background_image": {"type": "assets", "id": "default_hero_background"}
-            },
-            {
-                "category": { "type": "category", "id": 99999 },
-                "background_image": {"type": "assets", "id": "default_hero_background"}
-            }
-        ]
-    },
-    {
-        "id": "listings",
-        "kind": "listings",
-        "title": "Featured listings section",
-        "paragraph": "PLEASE NOTE: This section is NOT ENABLED by default. To enable this section, replace listing IDs with real IDs and add the section to the 'composition'. This section contains 3 featured listings",
-        "button_color": {"type": "marketplace_data", "id": "primary_color"},
-        "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-        "button_title": "Browse all listings",
-        "button_path": {"type": "path", "id": "search"},
-        "price_color": {"type": "marketplace_data", "id": "primary_color"},
-        "no_listing_image_background_color": {"type": "marketplace_data", "id": "primary_color"},
-        "no_listing_image_text": {"type": "translation", "id": "no_listing_image"},
-        "author_name_color_hover": {"type": "marketplace_data", "id": "primary_color"},
-        "listings": [
-            {
-                "listing": { "type": "listing", "id": 99999 }
-            },
-            {
-                "listing": { "type": "listing", "id": 99999 }
-            },
-            {
-                "listing": { "type": "listing", "id": 99999 }
-            }
-        ]
-    },
-    {
-        "id": "locations",
-        "kind": "locations",
-        "title": "Locations section",
-        "paragraph": "PLEASE NOTE: This section is NOT ENABLED by default. To enable this section add the section to the 'composition'. Locations section can contain 3 to 7 featured locations. Each location should have a background image.",
-        "location_color_hover": {"type": "marketplace_data", "id": "primary_color"},
-        "button_color": {"type": "marketplace_data", "id": "primary_color"},
-        "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
-        "button_title": "Browse all listings",
-        "button_path": {"type": "path", "id": "search"},
-        "locations": [
-            {
-                "title": "About",
-                "location": { "type": "path", "id": "about" },
-                "background_image": {"type": "assets", "id": "default_hero_background"}
-            },
-            {
-                "title": "Contact Us",
-                "location": { "type": "path", "id": "contact_us" },
-                "background_image": {"type": "assets", "id": "default_hero_background"}
-            },
-            {
-                "location": "https://bagshare.wordpress.com/",
-                "background_image": {"type": "assets", "id": "default_hero_background"}
-            }
-        ]
-    },
-    {
       "id": "footer",
       "kind": "footer",
-      "theme": "dark",
+      "theme": "light",
       "social_media_icon_color": {"type": "marketplace_data", "id": "primary_color"},
       "social_media_icon_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
       "links": [
@@ -387,19 +175,11 @@ module CustomLandingPage
 
   "composition": [
     { "section": {"type": "sections", "id": "hero"}},
+    { "section": {"type": "sections", "id": "video"}},
     { "section": {"type": "sections", "id": "how_it_works"}},
     { "section": {"type": "sections", "id": "about_tumlino"}},
     { "section": {"type": "sections", "id": "benefits"}},
     { "section": {"type": "sections", "id": "get_started"}},
-    { "section": {"type": "sections", "id": "markdown_support"}},
-    { "section": {"type": "sections", "id": "single_info_without_background_and_cta"}},
-    { "section": {"type": "sections", "id": "single_info_with_cta"}},
-    { "section": {"type": "sections", "id": "single_info_with_background_and_cta"}},
-    { "section": {"type": "sections", "id": "single_info_with_background_color_and_cta"}},
-    { "section": {"type": "sections", "id": "two_column_info_with_icons_and_buttons"}},
-    { "section": {"type": "sections", "id": "two_column_info_without_icons_and_buttons"}},
-    { "section": {"type": "sections", "id": "three_column_info_without_icons_and_buttons"}},
-    { "section": {"type": "sections", "id": "video"}},
     { "section": {"type": "sections", "id": "footer"}}
   ],
 
