@@ -48,10 +48,10 @@ module CustomLandingPage
       "id": "video",
       "kind": "video",
       "variation": "youtube",
-      "youtube_video_id": "UffchBUUIoI",
+      "youtube_video_id": "igSjslFH_DA",
       "width": "1280",
       "height": "720",
-      "text": "Video section can contain one Youtube video. Click to watch!"
+      "text": ""
     },
     {
       "id": "about_tumlino",
