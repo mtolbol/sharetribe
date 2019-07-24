@@ -8,8 +8,8 @@ module CustomLandingPage
 {
   "settings": {
     "marketplace_id": 9999,
-    "locale": "en",
-    "sitename": "example"
+    "locale": "da-DK",
+    "sitename": "Tumlino"
   },
 
   "page": {
