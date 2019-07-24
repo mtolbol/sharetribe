@@ -381,7 +381,15 @@ module CustomLandingPage
     { "id": "icon/map", "src": "icons/map.png", "content_type": "image/png" },
     { "id": "icon/notification", "src": "icons/notification.png", "content_type": "image/png" },
     { "id": "icon/profile", "src": "icons/profile.png", "content_type": "image/png" },
-    { "id": "icon/under_one_roof", "src": "icons/under_one_roof.png", "content_type": "image/png" }
+    { "id": "icon/under_one_roof", "src": "icons/under_one_roof.png", "content_type": "image/png" },
+
+    { "id": "photo/concept_video", "src": "photos/concept_video.png", "content_type": "image/png" },
+    { "id": "photo/family", "src": "photos/family.jpg", "content_type": "image/jpeg" },
+    { "id": "photo/get_started", "src": "photos/get_started.jpg", "content_type": "image/jpeg" },
+    { "id": "photo/green", "src": "photos/green.png", "content_type": "image/png" },
+    { "id": "photo/grey", "src": "photos/grey.png", "content_type": "image/png" },
+    { "id": "photo/mother", "src": "photos/mother.jpg", "content_type": "image/jpeg" },
+    { "id": "photo/professionals", "src": "photos/professionals.jpg", "content_type": "image/jpeg" }
   ]
 }
 JSON
