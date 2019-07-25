@@ -1537,6 +1537,7 @@ da-DK:
     create_new_marketplace: "Opret en ny markedsplads"
     contact_us: "Kontakt os"
     profile: Profil
+    manage_availability: "Opdater tilgængelighed"
     manage_listings: "Administrer annoncer"
     invite: "Referer til ven"
     login: "Log ind"

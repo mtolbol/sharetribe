@@ -16,6 +16,10 @@
     = icon_map_tag(icons, "list", ["icon-with-text"])
     = t("header.manage_listings")
 
+  = link_to working_date_slots_path do
+    = icon_map_tag(icons, "calendar", ["icon-with-text"])
+    = t("header.manage_availability")
+
   = link_to settings_path do
     = icon_map_tag(icons, "settings", ["icon-with-text"])
     = t("layouts.logged_in.settings")
