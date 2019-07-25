@@ -1674,6 +1674,7 @@ da-DK:
       create_own: "Vil du oprette din egen online markedsplads hjemmeside som %{learn_more} %{service_name}"
       learn_more: "Lær mere"
     no_tribe:
+      availability: "Tilgængelighed"
       inbox: Indbakke
       settings: Indstillinger
       feedback: "Kontakt %{service_name} team"
