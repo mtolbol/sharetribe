@@ -1537,6 +1537,7 @@ da-DK:
     create_new_marketplace: "Opret en ny markedsplads"
     contact_us: "Kontakt os"
     profile: Profil
+    manage_availability: "Opdater tilgængelighed"
     manage_listings: "Administrer annoncer"
     invite: "Referer til ven"
     login: "Log ind"
@@ -1673,6 +1674,7 @@ da-DK:
       create_own: "Vil du oprette din egen online markedsplads hjemmeside som %{learn_more} %{service_name}"
       learn_more: "Lær mere"
     no_tribe:
+      availability: "Tilgængelighed"
       inbox: Indbakke
       settings: Indstillinger
       feedback: "Kontakt %{service_name} team"

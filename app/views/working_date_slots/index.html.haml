@@ -1,5 +1,9 @@
 - date_slot_presenter = WorkingDateSlotPresenter.new
 
+- content_for :title_header do
+  %h1
+    %span.profile-title= translate("layouts.no_tribe.availability")
+
 .row
   .col-8.listing-details-container
     %table
