@@ -516,44 +516,44 @@ da-DK:
         reset_search: "Nulstil søgning"
         for_keyword: ~
       testimonials:
-        testimonials: ~
-        no_testimonials_found: ~
+        testimonials: "Anbefaling"
+        no_testimonials_found: "Ingen anbefalinger fundet"
         displaying_xx_reviews: ~
-        search_keyword: ~
-        search: ~
-        reset_search: ~
-        for_keyword: ~
+        search_keyword: "Søg"
+        search: "Søg"
+        reset_search: "Nulstil søgning"
+        for_keyword: "Søgeord"
         headers:
-          transaction: ~
-          author: ~
-          receiver: ~
-          status: ~
-          grade: ~
-          text: ~
+          transaction: "Transaktion"
+          author: "Forfatter"
+          receiver: "Modtager"
+          status: "Status"
+          grade: "Karakter"
+          text: "Tekst"
         status:
-          waiting: ~
+          waiting: "Afventer"
           skipped: ~
-          published: ~
-          blocked: ~
+          published: "Publiceret"
+          blocked: "Blokeret"
         status_filter:
-          selected: ~
-          all: ~
-          published: ~
-          positive: ~
-          negative: ~
+          selected: "Valgt"
+          all: "Alle"
+          published: "Publiceret"
+          positive: "Positive"
+          negative: "Negative"
           skipped: ~
-          waiting: ~
-          blocked: ~
+          waiting: "Afventer"
+          blocked: Blokeret"
           selected_js: ~
         form:
-          review_text: ~
-          save: ~
-          cancel: ~
-          delete_review: ~
-          block_review: ~
-          confirm_modify: ~
-          deleting_info: ~
-          blocking_info: ~
+          review_text: "Gennemse tekst"
+          save: "Gem"
+          cancel: "Annuller"
+          delete_review: "Slet"
+          block_review: "Blokér"
+          confirm_modify: "Bekræft ændring"
+          deleting_info: "Slet info"
+          blocking_info: "Blokér info"
       invitations:
         invitations: "Invitationer"
         used:
