@@ -2316,7 +2316,7 @@ da-DK:
       and_gave_following_feedback: "og gav følgende feedback"
     profile_listings:
       no_image: "Intet billede"
-      manage_listings: ~
+      manage_listings: Administrer annoncer
     show:
       contact: "Kontakt %{person}"
       about_me: "Om mig:"
