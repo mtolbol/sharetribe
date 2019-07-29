@@ -576,8 +576,8 @@ da-DK:
           open: "Åben"
           closed: "Lukket"
           expired: "Udløbet"
-          approval_pending: ~
-          approval_rejected: ~
+          approval_pending: "Godkendelse afventer"
+          approval_rejected: "Godkendelse afvist"
         headers:
           title: "Titel"
           author: "Oprettet af"
@@ -589,15 +589,15 @@ da-DK:
         closed: "Lukket"
         expired: "Udløbet"
         approved: "Godkendt"
-        approval_pending: ~
-        approval_rejected: ~
+        approval_pending: "Godkendelse afventer"
+        approval_rejected: "Godkendelse afvist"
         form:
-          this_listing_has_not_not_been_approved_yet: ~
+          this_listing_has_not_not_been_approved_yet: "Denne annonce er endnu ikke blevet godkendt"
           approve: "Godkend"
           reject: "Afslå"
           cancel: "Annuller"
       user_fields:
-        user_fields: ~
+        user_fields: "Bruger felter"
       footer:
         footer: ~
         offer_pro: ~
@@ -667,7 +667,7 @@ da-DK:
         categories: "Annoncekategorier hvor feltet er i brug"
         select_all: "Vælg alle"
         clear_all: "Fravælg alle"
-        options: Valg
+        options: "Indstillinger"
         add_option: "+ Tilføj mulighed"
         saving_order: "Gem feltets rækkefølge"
         save_order_successful: "Felt rækkefølge gemt"
@@ -680,11 +680,11 @@ da-DK:
       new:
         new_listing_field: "Nyt annonce felt"
       field_types:
-        text: Tekst
-        number: Nummer
-        dropdown: Dropdown
-        checkbox_group: Tjekboks
-        date: Dato
+        text: "Tekst"
+        number: "Nummer"
+        dropdown: "Dropdown"
+        checkbox_group: "Tjekboks"
+        date: "Dato"
         file: "Fil"
         location: "Lokation"
     person_custom_fields:
@@ -754,7 +754,7 @@ da-DK:
       read_more: "Læs mere om automatisk tilgængelighed."
       read_more_availability_management: "Læs mere om tilgængelighedsstyring."
       allow_providers_to_manage_availability: "Tillad sælgere at ændre deres tilgængelighed fra en kalender"
-      per_hour_availability: ~
+      per_hour_availability: "\"Pr. time\" tilgængelighed"
       per_day_availability: "\"Pr. dag\" tilgængelighed"
       per_night_availability: "\"Pr. nat\" tilgængelighed"
       pricing_units_disabled_info: "Prisenheder kan ikke blive brugt når kalenderen er i brug."
@@ -829,7 +829,7 @@ da-DK:
         night: "Pr. nat"
         week: "Pr. uge"
         month: "Pr. måned"
-        unit: ~
+        unit: "Enhed"
       can_not_find: "Kan ikke finde ordre type med id: %{id}"
       add_custom_unit: "+ Tilføj en brugerdefineret prisenhed..."
       delete_custom_unit: slet
@@ -866,21 +866,21 @@ da-DK:
       minimum_listing_price_below_tx_fee: "skal mindst være det samme som mindste transaktionsafgift %{minimum_transaction_fee}."
       minimum_listing_price_below_min: "skal være større end mindste provision %{minimum_commission}."
     payment_preferences:
-      title: ~
-      general_settings: ~
-      connect_a_payment_provider: ~
-      contact_support: ~
+      title: "Titel"
+      general_settings: "Generelle indstillinger"
+      connect_a_payment_provider: "Tilkobl en betalingsudbyder"
+      contact_support: "Kontakt support"
       no_payments_link_text: ~
-      your_country: ~
-      you_cannot_use_online_payments: ~
+      your_country: "Dit land"
+      you_cannot_use_online_payments: "Du kan ikke benytte online betaling"
       which_to_choose: ~
-      you_can_use_stripe_or_paypal: ~
-      you_can_use_stripe_only: ~
-      read_more_stripe: ~
-      you_can_use_paypal_only: ~
-      read_more_paypal: ~
+      you_can_use_stripe_or_paypal: "Du kan benytte stripe eller paypal"
+      you_can_use_stripe_only: "Du kan udelukkende benytte stripe"
+      read_more_stripe: "Læs om Stripe"
+      you_can_use_paypal_only: "Du kan udelukkende benytte Paypal"
+      read_more_paypal: "Læs om Paypal"
       read_more_about_paypal_and_stripe: "Læs mere om online betalinger, Stripe og PayPal"
-      general_settings_updated: ~
+      general_settings_updated: "Generelle indstillinger er opdateret"
       transaction_fee_settings_updated: ~
       choose_popup_text: ~
       invalid_api_keys: ~
@@ -1868,9 +1868,9 @@ da-DK:
       settings: Indstillinger
       paypal_payments: "PayPal betalinger"
       stripe_payments: "Stripe betaling"
-      payments: Betalinger
-      listings: ~
-      listings_search_placeholder: ~
+      payments: "Betalinger"
+      listings: "Annoncer"
+      listings_search_placeholder: "Søg på annonce"
   listings:
     bubble_listing_not_visible:
       listing_not_visible: "Du har ikke tilladelse til at se denne liste."
