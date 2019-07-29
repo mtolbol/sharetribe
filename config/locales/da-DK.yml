@@ -2664,7 +2664,7 @@ da-DK:
       save_and_close_availability_editing: "Gem og luk"
       confirm_discarding_unsaved_availability_changes_explanation: "Du har ikke-gemte ændringer i dine tilgængelighedsoplysninger. Hvis du fortsætter, vil disse ændringer gå tabt."
       confirm_discarding_unsaved_availability_changes_question: "Er du sikker på, at du vil droppe dine ændringer?"
-      edit_listing_availability: "Ændr annoncens tilgængelighed"
+      edit_listing_availability: "Opdater tilgængelighed"
       working_hours:
         default_schedule: "Standard skema"
         i_am_available_on: "Jeg er tilgængelig på..."
