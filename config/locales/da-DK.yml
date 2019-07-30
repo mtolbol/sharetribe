@@ -1616,11 +1616,11 @@ da-DK:
       email: Emailadresse(r)
       message: "Skriv din invitation her:"
       send_invitation: "Send invitation"
-      add_email_addresses_description: "Tilføj emailadresser på dem du ønsker at invitere i feltet nedenfor. Hvis du vil tilføje flere emailadresser, skal de adskilles med komma."
+      add_email_addresses_description: "Nu har du muligheden for at invitere dine venner til at blive en del af Tumlino. Tilføj emailadresser på dem du ønsker at invitere i feltet nedenfor. Hvis du vil tilføje flere emailadresser, skal de adskilles med komma."
       add_lots_of_email_addresses: "Hvis du planlægger at sende mange invitationer, skal du bruge et e-mail værktøj. Tjek %{this_article_link} for at finde informationer omkring egnede e-mail tjenester."
       this_article_link: "denne artikel"
       invitation_emails_field_placeholder: "email1@example.com, email2@example.com, ..."
-      invitation_message_field_placeholder: "Jeg har lige tilmeldt mig denne fantastiske markedsplads. Det bør du også! :)"
+      invitation_message_field_placeholder: "Indsæt din tekst her"
       errors_in_emails: "Tjek at den email du har indtastet er korrekt. Hvis du har indtastet flere emails, så tjek om du har opdelt dem med komma."
     list_item:
       review: anmeldelse
@@ -1894,7 +1894,7 @@ da-DK:
       close_listing: "Luk annoncen"
       edit_listing: "Ret annoncen"
       reopen_listing: "Genopret opslag"
-      move_to_top: "Vis på forsiden"
+      move_to_top: "Se annoncen på markedspladsen"
       show_in_updates_email: "Vis i næste automatiske nyhedsbrev"
       show_in_updates_email_loading: Venter...
       show_in_updates_email_error: "Serveren kunne ikke findes. Prøv at genindlæse siden."
