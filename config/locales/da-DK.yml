@@ -1539,7 +1539,7 @@ da-DK:
     profile: Profil
     manage_availability: "Opdater tilgængelighed"
     manage_listings: "Administrer annoncer"
-    invite: "Referer til ven"
+    invite: "Inviter ven"
     login: "Log ind"
     signup: Tilmeld
     menu: Menu
@@ -2721,7 +2721,7 @@ da-DK:
       single_page_html:
         zero: "Ingen %{model} fundet"
         one: "Viser <b>1</b> %{model}"
-        other: "Viser <b>all&nbsp;%{count}</b> %{model}"
+        other: "Viser <b>alle&nbsp;%{count}</b> %{model}"
       multi_page: "Viser %{model} %{from} - %{to} af %{count} i alt"
       multi_page_html: "Viser %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> af <b>%{count}</b> i alt"
     person:
