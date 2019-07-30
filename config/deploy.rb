@@ -29,8 +29,12 @@ set :default_env, {
   ].join(":")
 }
 
+set :whenever_environment, fetch(:stage)
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
-
+set :whenever_variables, -> do
+  "'environment=#{fetch(:whenever_environment)}" \
+  "&rbenv_root=#{fetch(:rbenv_path)}'"
+end
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
