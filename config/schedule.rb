@@ -15,7 +15,7 @@ every 1.day do
   rake "sharetribe:delete_expired_auth_tokens"
 end
 
-every 1.hour do
+every 10.minutes do
   # Keep search indexes reasonably up to date
   rake "ts:index"
 end
