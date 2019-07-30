@@ -85,7 +85,7 @@ da-DK:
         private_community_homepage_content: ~
         edit_private_community_homepage_content_description: ~
         update_information: "Gem instillinger"
-        invite_people: "Inviter nye brugere"
+        invite_people: "Inviter ven"
         edit_signup_info: "Oprettelses information"
         edit_signup_info_description: "Dette er en instruktions tekst der kan blive vist til brugere på tilmeldings-siden. Her kan du give brugerne instruktioner for tilmelding, oplysninger som, hvor man kan få en invitation, mv. Som standard er der ingen instruktioner."
         edit_info: "Rediger information"
