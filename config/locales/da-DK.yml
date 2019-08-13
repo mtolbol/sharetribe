@@ -2459,7 +2459,7 @@ da-DK:
       given_name: Fornavn
       first_name_with_initial: "(kun forbogstavet vil blive vist til andre brugere)"
       first_name_only: "(vises ikke til andre brugere)"
-      display_name: "Vist navn"
+      display_name: "Brugernavn"
       display_name_description: "Hvis du repræsenterer en virksomhed eller organisation, kan du benytte dennes navn som brugernavn. Brugernavnet vises til andre brugere i stedet for dit for- og efternavn."
       location_description: "Angiv enten nøjagtig placering eller postnummer, eller vælg en placering på kortet."
       profile_picture_description: "Profilbilledet bør være kvadratisk (1:1 ratio), fx 800x800 pixels ellers bliver det beskæret."
