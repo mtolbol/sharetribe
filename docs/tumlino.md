@@ -7,6 +7,7 @@ Documentation additions and changes specific to Tumlino.
 The API key we're using needs access to the following APIs:
 
 - Geocoding API
+- Maps Embed API
 - Maps Javascript API
 - Maps Static API
 
