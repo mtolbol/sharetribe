@@ -58,9 +58,12 @@ section_style_class = hero_style_variations[s["background_image_variation"]]
                 <input type="search" name="q" class="hero__keyword-search-input--combined" placeholder="<%= s["search_placeholder"]["value"] %>"/>
                 <input type="search" name="lq" class="hero__location-search-input--combined" placeholder="<%= s.dig("search_location_with_keyword_placeholder", "value") %>"/>
               <% else %>
-                <input type="search" name="q" class="hero__search-input" placeholder="<%= s["search_placeholder"]["value"] %>"/>
+                <input type="search" name="q" class="hero__keyword-search-input--combined" placeholder="<%= s["search_placeholder"]["value"] %>"/>
+                <input type="search" name="location" id="location" class="hero__location-search-input--combined" placeholder="<%= s.dig("search_location_with_keyword_placeholder", "value") %>"/>
               <% end %>
             </div>
+            <input type="hidden" name="lat" id="lat" />
+            <input type="hidden" name="lng" id="lng" />
             <button type="submit" class="hero__search-button hero__search-button<%= combined_mode %>"><%= s["search_button"]["value"] %></button>
             <% if search_mode == "location_search" || search_mode == "keyword_and_location_search" %>
               <input type="hidden" name="ls" />

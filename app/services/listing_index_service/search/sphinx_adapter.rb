@@ -69,6 +69,18 @@ module ListingIndexService::Search
             price_cents: search[:price_cents],
             listing_id: numeric_search_match_listing_ids,
           })
+        
+        order = 'sort_date DESC'
+        if need_location_search?(search) 
+          if latlng_exist?(search[:latitude], search[:longitude])
+            @cords = [search[:latitude], search[:longitude]]
+          else
+            latlng = Geocoder.coordinates(search[:location])
+            @cords = [to_radians(latlng[0]), to_radians(latlng[1])] if latlng.present?
+          end
+          with.merge!(geodist: 0.0..10000) # limit for search critiarea
+          order = 'geodist ASC'
+        end
 
         selection_groups = search[:fields].select { |v| v[:type] == :selection_group }
         grouped_by_operator = selection_groups.group_by { |v| v[:operator] }
@@ -83,6 +95,7 @@ module ListingIndexService::Search
           sql: {
             include: included_models
           },
+          geo: @cords,
           page: search[:page],
           per_page: search[:per_page],
           star: true,
@@ -99,6 +112,18 @@ module ListingIndexService::Search
         end
       end
 
+    end
+
+    def need_location_search?(search)
+      (search[:location].present? || latlng_exist?(search[:latitude], search[:longitude]))
+    end
+
+    def latlng_exist?(lat, lng)
+      (lat.present? && lat > 0) && (lng.present? && lng > 0)
+    end
+
+    def to_radians(degrees)
+      degrees * (Math::PI/180)
     end
 
     def search_out_of_bounds?(per_page, page)

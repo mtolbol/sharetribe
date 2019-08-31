@@ -16,6 +16,7 @@ module ListingIndexService::DataTypes
     [:page, :to_integer, default: 1, gte: 1],
     [:per_page, :to_integer, :mandatory, gte: 1],
     [:keywords, :string, :optional],
+    [:location, :string, :optional],
     [:latitude, :to_float, :optional],
     [:longitude, :to_float, :optional],
     [:distance_max, :to_float, :optional],

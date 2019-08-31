@@ -2126,10 +2126,21 @@ figure.fluidratio {
       vertical-align: top;
       margin-right: em(-4);
       padding: 0 em(15);
-      width: 73%;
+      width: 36.5%;
       display: inline;
       line-height: 40px;
       height: 42px;
+    }
+
+    .keyword-search {
+      border-top-right-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+    }
+
+    .location-search {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-left: 1px solid #c8c8c8;
     }
 
     button.action-button {
@@ -2187,9 +2198,20 @@ figure.fluidratio {
 
       input[type=text] {
         @include normal-type;
-        width: 77%;
+        width: 38%;
         line-height: $search-bar-height;
         height: $search-bar-height;
+      }
+
+      .keyword-search {
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+      }
+
+      .location-search {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-left: 1px solid #c8c8c8;
       }
 
       button.action-button {
