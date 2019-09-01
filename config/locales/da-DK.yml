@@ -1312,12 +1312,12 @@ da-DK:
       new_payment: "Du har modtaget en ny betaling"
       price_per_unit_type: "Pris per %{unit_type}"
       quantity: "Mængde:"
-      you_have_received_new_payment: "Du er blevet betalt <b>%{payment_sum}</b> for <b>%{listing_title}</b> af %{payer_full_name}. Her er din kvittering."
+      you_have_received_new_payment: "Du er blevet betalt <b>%{payment_sum}</b> for <b>%{listing_title}</b> af %{payer_full_name}. Her er din bekræftelse."
       stripe:
-        you_have_received_new_payment: "Beløbet <b>%{payment_sum}</b> er blevet betalt for <b>%{listing_title}</b> af %{payer_full_name}. Pengene bliver tilbageholdt af %{service_name} indtil ordren er blevet markeret som færdiggjort. Her er din kvittering."
+        you_have_received_new_payment: "Beløbet <b>%{payment_sum}</b> er blevet betalt for <b>%{listing_title}</b> af %{payer_full_name}. Pengene bliver tilbageholdt af %{service_name} indtil ordren er blevet markeret som færdiggjort. Her er din bekræftelse."
     payment_receipt_to_payer:
-      receipt_of_payment: "Kvittering for betaling"
-      you_have_made_new_payment: "Du er blevet betalt <b>%{payment_sum}</b> for <b>%{listing_title}</b> af %{recipient_full_name} . Her er din kvittering."
+      receipt_of_payment: "Bekræftelse af betaling"
+      you_have_made_new_payment: "Du har betalt <b>%{payment_sum}</b> for <b>%{listing_title}</b> af %{recipient_full_name} . Her er din bekræftelse."
       product: Produkt
       price_per_unit_type: "Pris per %{unit_type}"
       duration: Varighed
