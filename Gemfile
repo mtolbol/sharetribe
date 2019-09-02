@@ -66,6 +66,7 @@ gem 'mercury-rails',
   ref: '1a9d4ac5a0a5fd0d459ff1986f9f05e617415b16'
 
 gem 'countries', '~> 2.0.8'
+gem 'geocoder'
 gem "mail_view", '~> 2.0.4'
 gem 'statesman', '~> 2.0.1'
 gem "premailer", '~> 1.10.4'
