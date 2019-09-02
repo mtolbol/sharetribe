@@ -395,7 +395,7 @@ default: &default_settings
 
   # Display mention of custom landing page in admin panel
   show_landing_page_admin: true
-  custom_landing_page_marketing_site_url: "https://beta.tumlino.dk/landingpage/"
+  custom_landing_page_marketing_site_url: "https://www.tumlino.dk/landingpage/"
 
   #######
   # Fonts
