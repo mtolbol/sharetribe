@@ -1592,7 +1592,8 @@ da-DK:
       private_listing_notification_log_in: "log ind"
       is: er
       are: er
-      what_do_you_need: "Hvad leder du efter?"
+      what_do_you_need: "Hvad søger du?"
+      location: By
       post_new_listing: "Opret annonce"
       are_offering: tilbud
       add_news_item: "Tilføj en artikel"
